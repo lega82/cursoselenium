@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# 2015-06-011:v5
+
+# Explicitly cached 'master entries'.
+../imagen/ico/favicon.ico
+../estilos/hoja_LED.css
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+FALLBACK:
+
+# Additional resources to cache
+CACHE:
+../estilos/normalize.min.css
+../estilos/main.css
+../estilos/font_futura_stylesheet.css
+../html/p_cabecera_carga_LED.html
+../html/p_cabecera_descarga_LED.html
+../fonts/futuralc-webfont.woff
+../fonts/futurabc-webfont.ttf

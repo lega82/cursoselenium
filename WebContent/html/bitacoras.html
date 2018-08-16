@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function showSucursal(str)
+{
+var xmlhttp;
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    
+    }
+  }
+xmlhttp.open("GET","../jsp/p_select.jsp?sucursal="+str);
+
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+ <TABLE border="0" align="center"  width="50%"  cellspacing="0" cellpadding="0">
+<tr><td width="70%" align="center"  rowspan="2"><IMG SRC="../imagen/base03_r1_c1.jpg" width="600" height="100" ></td>
+</tr></table>
+<table border='0'  align='center' width='50%'  cellspacing='0' cellpadding='0'>
+<tr><td align='center'  valign=top colspan="2"><font size="4" color="#111117"    face="tahoma"><b>Pantalla Informativa</b></font><br><br></td></tr>
+<tr><td align="right" width='50%' ><b><font size="3" color="#111117"  face="tahoma">Sucursal:&nbsp;</b></font></td>
+<td>
+
+
+<form action=".">  
+
+<select name="sucursal" onchange="showSucursal(this.value)">
+<option value="">Selecciona Sucursal..</option>
+<option value='AGU01'>AGUAS CALIENTES
+<option value='BJX01'>BAJIO
+<option value='CEN01'>OBREGON
+<option value='CUL01'>CULIACAN
+<option value='CUU01'>CHIHUAHUA
+<option value='GDL01'>GUADALAJARA
+<option value='GDL02'>GUADALAJARA PERIFERICO
+<option value='GYM01'>GAYMAS
+<option value='HMO01'>HERMOSILLO
+<option value='LMM01'>LOS MOCHIS
+<option value='LAP01'>LA PAZ
+<option value='QRO01'>QUERETARO 
+<option value='IRA01'>IRAPUATO
+<option value='PBC01'>PUEBLA 
+<option value='MZT01'>MAZATLAN 
+<option value='MXL01'>MEXICALI 
+<option value='MEX01'>MEXICO
+<option value='MID01'>MERIDA
+<option value='MTY01'>MONTERREY
+<option value='TIJ01'>TIJUANA
+<option value='TRC01'>TORREON
+<option value='SLP01'>SAN LUIS POTOSI
+<option value='VSA01'>VILLA HERMOSA
+
+
+</select>
+</form>
+</td></tr>
+
+
+
+</table>
+<div id="txtHint" align="center"></div>
+</body>
+</html>
+

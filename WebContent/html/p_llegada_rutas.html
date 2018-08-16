@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function showSucursal(str)
+{
+var xmlhttp;
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","../jsp/p_llegadas.jsp?sucursal="+str);
+
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<TABLE border="0" align="center"  width="50%"  cellspacing="0" cellpadding="0">
+<tr><td width="70%" align="center"  rowspan="2"><IMG SRC="../imagen/base03_r1_c1.jpg" width="600" height="100" ></td>
+</tr></table>
+<table border='0'  align='center' width='50%'  cellspacing='0' cellpadding='0'>
+<tr><td align='center'  valign=top colspan="2"><font size="4" color="#111117"    face="tahoma"><b>Pantalla Informativa</b></font><br><br></td></tr>
+<tr><td align="right" width='50%' ><b><font size="3" color="#111117"  face="tahoma">Sucursal:&nbsp;</b></font></td>
+<td>
+
+
+<form action=".">  
+
+<select name="sucursal" onchange="showSucursal(this.value)">
+<option value="A">ALLS..</option>
+<option value='AGU'>AGUAS CALIENTES
+<option value='BJX'>BAJIO
+<option value='CEN'>OBREGON
+<option value='CUL'>CULIACAN
+<option value='CUU'>CHIHUAHUA
+<option value='GDL'>GUADALAJARA
+<option value='GYM'>GUAYMAS
+<option value='HMO'>HERMOSILLO
+<option value='LMM'>LOS MOCHIS
+<option value='LAP'>LA PAZ
+<option value='QRO'>QUERETARO 
+<option value='IRA'>IRAPUATO
+<option value='PBC'>PUEBLA 
+<option value='MZT'>MAZATLAN 
+<option value='MXL'>MEXICALI 
+<option value='MEX'>MEXICO
+<option value='MID'>MERIDA
+<option value='MTY'>MONTERREY
+<option value='TIJ'>TIJUANA
+<option value='TRC'>TORREON
+<option value='SLP'>SAN LUIS POTOSI
+<option value='VSA'>VILLA HERMOSA
+</select>
+</form>
+</td></tr>
+</table>
+
+<div id="txtHint" align="center"></div>
+
+</body>
+</html>
+

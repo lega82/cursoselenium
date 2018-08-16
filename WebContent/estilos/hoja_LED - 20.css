@@ -1,0 +1,1558 @@
+/*
+
+
+##       ######## ########
+##       ##       ##     ##
+##       ##       ##     ##
+##       ######   ##     ##
+##       ##       ##     ##
+##       ##       ##     ##
+######## ######## ########
+
+*/
+/*
+#scroller{overflow:hidden;}
+#scroller:hover{overflow-y:auto;}
+*/
+
+/* ---------------
+
+RESPONSIVE
+Media Queries
+
+--------------- */
+
+
+body, frameset, html  {
+font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+  background-color: black;
+  background: black;
+/*   font-family: 'Futura BdCn BT', Arial, sans-serif;*/
+}
+
+/*
+frameset {
+    background-image: url('path/to/image.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+*/
+
+font-cond-light {
+	font-family: 'futura_ltcn_btlight', Arial, sans-serif;
+}
+
+.background-black {
+  background-color: black;
+  color: #757575;
+}
+
+@media only screen and (min-width : 10px) and (max-width : 480px) {
+
+
+/*===========================
+1. ESTILOS GLOBALES
+===========================*/
+
+* {
+ margin:0;
+ padding:0;
+}
+
+body, html, td, th {
+    margin: 0;
+    padding: 0;
+/*    text-rendering: optimizeSpeed;*/
+}
+body, html {
+    border: none;
+    /*  padding-right: 5px;*/
+    width: 100%;
+/*    line-height: 1.2;*/
+}
+
+body, frameset, html  {
+  background-color: black;
+}
+
+
+table.detalle_carga {
+  /*
+  border-top: 1px solid #790000;
+  */
+  border-top: 1px solid #1B1B1B;
+}
+
+#encabezado img {
+vertical-align: text-top; 
+}
+
+i.fa.fa-arrow-up.fa-fw,
+i.fa.fa-arrow-down.fa-fw {
+  font-size: 0.8em;
+  padding-right: 2px;
+}
+
+.fila_excedente {
+  color: #FCB3B3 !important;
+}
+
+.porcentaje_excedente {
+  color: #ff0000 !important;
+}
+
+.font-size-09,
+td.font-size-09 {
+	font-size: 0.9em !important;
+	
+}
+	
+#invert,
+.background-black {
+  background-color: black;
+  color: #757575;
+}
+
+td.color-1 {
+	color: #9ECDFF !important;
+}
+font {
+    color: white;
+}
+
+#invert tr.fondo-2 {
+  color: #fff;
+}
+
+#invert td {
+  color: #9ECDFF;
+}
+
+#invert td.col1 {
+  width: 93px;
+  min-width: 93px;
+  color: white;
+}
+
+
+.texto_normal {
+    color: white;
+}
+
+/*
+#invert font {
+  white-space: nowrap;
+}
+*/
+
+.slabtextdone {
+ -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.slabtext {
+ position: relative;
+ top: 50%;
+ transform: translateY(-50%);
+}
+
+/*.detalle_carga-tabla table,
+#detalle_carga-tabla tr, */
+#detalle_carga-tabla td:nth-child(n+3)
+#body-guias-para-sucursal td:nth-child(n+3) {
+  text-align: right;
+}
+
+
+/*
+Centrando los slabtext
+*/
+
+
+/*
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row *//* works with row or column */ 
+   /*
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   */
+/* IE ... */
+/*
+   text-align: center;
+   
+}
+*/
+
+
+
+
+/*
+Color oficial de Paquetexpress:  #0D4E94
+*/
+.color-azul-paquetexpress {
+    color: #0D4E94;
+}
+
+/* invertimos para pantallas peque�as */
+.color-2 {
+/*    color: #748187;*/
+color: white;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, span, tr, td, th {
+	font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+table {
+    /* no queremos que ocupe mucho espacio */
+    border-collapse: collapse;
+    /* a llenar la tabla en toda la ventana */
+    width: 100%;
+    height: 100%;
+    /*  white-space: nowrap;*/
+  /*  overflow: hidden;*/
+    margin: 0;
+    padding: 0;
+}
+h1 {
+/*  font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;*/
+  font-size: 0.9em;
+  color: #bbb;
+/*  background: #111;*/
+  letter-spacing: 0;
+  font-weight: 300;
+  margin: 0;
+  padding: 3px 4px 5px;
+  position: absolute;
+  float: none;
+  clear: both;
+  font-style: normal;
+  border: 0;
+}
+status, #encabezado th  {
+    text-align: center;
+/*    font-family: 'futura_bdcn_btbold', 'Futura BdCn BT', Arial, sans-serif;*/ 
+}
+
+h2, status {
+  letter-spacing: 0px;
+  font-size: 0.9em;
+}
+h3 {
+ /*   font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;*/
+    font-size: 16px;
+    font-weight: normal;
+/*    line-height: 1;*/
+/*    float: left;*/
+text-align: left;
+/*    clear: right; */
+ /*   padding-top: 1px;*/
+    color: white;
+}
+
+h3#llegada-esperada {
+  font-size: 0.6em;
+}
+
+h4 {
+    /*  font-family: 'futura_bdcn_btbold', 'Futura BdCn BT', Arial, sans-serif;*/
+ /*   font-weight: 300;*/
+    font-size: 0.9em;
+    color: #464646;
+}
+
+
+
+h5 {
+    /*    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;*/
+/*font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-size: 1em;
+    color: white;
+    line-height: 1;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+ /*   float: left;*/
+    clear: both;
+/*    font-weight: 900; */
+    padding: 0 10px;
+    margin: 0 0 0 0;
+  letter-spacing: 0px;
+/*  font-weight: bold;*/
+  height: initial;
+  margin: 0;
+  padding: 0;
+    text-align: right;
+}
+h6 {
+    color: #0D4E94;
+}
+.font-size-1 {
+  font-size: 1em;
+}
+.underline-white {
+   color: white !important;
+}
+#infobitacora > tbody > tr:nth-child(2) > td:nth-child(2) > h6 {
+ color: white;
+}
+#regresar span {
+  display: none;
+}
+h6, 
+hora {
+/*    font-family: 'futura_bdcn_btbold', 'Futura BdCn BT', Arial, sans-serif;*/
+/*	font-family: 'Futura BdCn BT', Arial, sans-serif; */
+/*    margin-top: 1px;
+    margin-bottom: 2px;
+    line-height: 1.1;*/
+    letter-spacing: 0px;
+}
+hora {
+ /*   float: right;*/
+    text-align: right;
+}
+div#reloj,
+hora,
+hora.js-blink-furiously {
+    padding-right: 5px;
+}
+hora.js-blink-furiously {
+	font-size:12px;
+}
+.color-1 {
+    color: #9ECDFF;
+}
+.color-3 {
+  color: #E3ECD8;
+}
+.color-4 {
+  color: #61ADFF !important;
+}
+
+.fondo-1 tr, .infobitacora-tabla-1 {
+    /* El azul Oficial un poco + oscuro */
+	/*  background: #003E82;*/
+    background: #000;
+    /* background: #0D4E94;*/
+}
+
+/*
+#txtHint > table > tbody > tr {
+    background: black;
+}
+*/
+.fondo-2 tr {
+    background: #F5F5F5;
+}
+
+.fondo-3 {
+    color: black;
+}
+#tiempo-restante {
+    font-size: 0.7em;
+    background: #000;
+    /* background: red;*/
+    color: #fff;
+}
+#tiempo-restante-retraso {
+    /* background: #F5F5F5;*/
+    background: #000;
+    color: red;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================
+*/
+
+
+.btn-oldstyle-nofloat {
+/* margin-left: 10px; */
+padding: 20px;
+/*padding-left: 30px;
+padding-right: 30px;*/
+width: 100%;
+/*border: 2px;*/
+/* background-color: #00aaff; */
+/* border-color: #00aaff; */
+color: #fff;
+/* border-color: #0088cc #0088cc #005580; */
+line-height: 2em;
+height: 100%;
+/* text-overflow: clip; */
+/*text-overflow: initial;*/
+}
+
+
+
+
+
+.txt__small, .txt__small--bold {
+color: #8F8F8F;
+font-size: 11px;
+white-space: normal;
+word-break: break-all;
+}
+
+
+.txt-bubble-1, .txt-bubble-2, .txt-bubble-3, .txt-bubble-4, .txt-bubble-5, .txt-bubble-80 {
+color: white;
+border: none;
+padding: 10px 30px;
+background: #a7a5ac;
+border-radius: 20px;
+margin: 0 auto;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 6px;
+font-family: inherit;
+}
+
+
+
+  .txt-bubble-1 {
+    width: 75px;
+}
+
+.txt-bubble-2 {
+    width: 100px;
+}
+
+.txt-bubble-3 {
+    width: 190px;
+}
+
+.txt-bubble-4 {
+    width: 275px;
+}
+
+.txt-bubble-5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 450px;
+    letter-spacing: 5px;
+}
+
+.txt-bubble-80 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    letter-spacing: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============================================================================
+2. ESTILOS ESTRUCTURALES
+==============================================================================*/
+
+
+/*
+
+INDEX.HTML
+
+*/
+
+
+
+#seccion-index {
+  background:#0D4E94;
+}
+
+
+
+
+.page-wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.site-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+/*  background-color: steelblue;*/
+  padding: 20px;
+}
+
+.site-header > nav {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.site-header > nav > ul {
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.site-header > nav a {
+  background: white;
+  color: black;
+  padding: 5px 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.site-header a {
+  text-decoration: none;
+}
+
+.site-header .logo {
+/*  color: white;*/
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: -0.1rem;
+}
+
+.banner {
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+/*  background-color: steelblue;*/
+  padding: 20px 40px 0 20px;
+}
+
+main .work {
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+
+main .work div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+main figure {
+/*  border: 2px solid #ADD8E6;*/
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 5px;
+  text-align: center;
+/*  border-radius: 5px;*/
+}
+
+main img {
+  width: 40%;
+/*  border-bottom: 2px solid #ADD8E6;*/
+}
+
+main figcaption {
+  background-color: #009ceb;
+  background-image: -moz-linear-gradient(top,#00aaff,#0088cc);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#00aaff),to(#0088cc));
+  background-image: -webkit-linear-gradient(top,#00aaff,#0088cc);
+  background-image: -o-linear-gradient(top,#00aaff,#0088cc);
+  padding: 25px 0;
+  margin: 30px;
+}
+
+
+main figcaption:hover {
+  background: #2ABCF2;
+}
+
+
+
+
+
+
+footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  background: #ADD8E6;
+}
+
+footer p {
+  height: 100%;
+  line-height: 50px;
+  padding: 0 5px;
+  margin: 0 auto 0 15px;
+}
+
+footer ul {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+footer li {
+  position: relative;
+  margin-right: 15px;
+}
+
+footer li:first-child {
+  margin-left: 15px;
+}
+
+footer a {
+  margin-top: -2px;
+  padding: 8px 5px;
+  border-radius: 5px;
+  -webkit-transition: background-color .4s ease-in-out;
+  transition: background-color .4s ease-in-out;
+}
+
+footer a:hover {
+  background: steelblue;
+}
+
+
+
+
+
+
+
+
+/*
+
+BITACORAS.HTML
+
+
+*/
+
+
+
+
+.bitacoras-titulo {
+    font-size: 2em;
+/*     color: #555; */
+/*  color: #E9E9E9;*/
+  color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------
+2.1 ESTILOS PARA BITACORA DE CARGA
+---------------------------------------------------------------------*/
+
+div#s2id_select2aqui {
+width: 95%;
+     font-size: 1.4em !important;
+
+}
+
+#select2aqui {
+  padding: 5px;
+  font-size: 1.4em;
+}
+
+
+ /* Tamaño de texto en busqueda Cotizador */
+.select2-search input {
+     font-size: 1.4em !important;
+}
+
+.select2-results .select2-result-label {
+     font-size: 1.4em !important;
+}
+
+.select2-container {
+  margin-top: 6px !important;*/
+  margin-bottom: 9px !important;*/
+}
+
+
+
+
+.titulo-sucursal {
+  margin-left: 20px;
+}
+
+/*
+#technique-one {
+  margin-top: 0.5em;
+  width: 180px;
+  height: 39px;
+  background-image: url(../imagen/logo.png);
+}
+
+#technique-one span {
+  display: none;
+}
+*/
+/* 
+#bitacoras {
+   width: 50%;
+}
+*/
+#bitacoras td,
+#bitacorasensucursal td{
+    padding: 5px;
+    font-size: 1.3em;
+}
+#bitacoras th,
+#bitacorasensucursal th{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 2em;
+}
+
+#bitacorasenproceso {
+  background: black;
+  color: white;
+}
+
+/*
+#bitacoras tr.alt td {
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+}
+*/
+/*--------------------------------------------------------------------
+2.1.1 ESTILOS PARA BITACORA DE CARGA - Info Bitacora (Parte Izquierda)
+--------------------------------------------------------------------*/
+
+#separador-1 {
+    border-top: 1px solid black;
+}
+
+table#encabezado {
+  margin-top: 3px;
+}
+
+#detalle_carga-barra-izquierda,
+#detalle_carga-ancho,
+#detalle_bitacora-tripulacion {
+  margin: 0;
+  min-width: 100%;
+  width: 100%;
+    /*
+    margin: 0 5px;
+    min-width: 99%;
+   max-width: 291px;*/
+}
+#detalle_carga-barra-izquierda td {
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+.sombra {
+    -webkit-box-shadow: 0 5px 3px 1px #757575;
+    -moz-box-shadow: 0 5px 3px 1px #757575;
+    box-shadow: 0 5px 3px 1px #757575;
+}
+#infobitacora {
+    /* ID de la tabla */
+    margin-top: 0.2em;
+    margin-bottom: 10px;
+    padding: 0;
+    color: white;
+/*
+    -webkit-box-shadow: 0 4px 3px 1px #9ea7af;
+    -moz-box-shadow: 0 4px 3px 1px #9ea7af;
+    box-shadow: 0 4px 3px 1px #9ea7af;
+    */
+}
+#infobitacora th {
+    font-size: 1em;
+    padding-left: 5px;
+    color: #D5DDE5;
+    /*  color:white;*/
+  /*border-bottom: 2px solid #1686FF;*/
+  /*
+    border-bottom: 1px solid #003A78;
+    */
+    line-height: 1;
+    /* y degradado */
+/*    height: 55px;*/
+}
+#guias {
+    width: 45%;
+    padding-left: 15%;
+}
+#bultos {
+    width: 55%;
+    text-align: center;
+    clear: right;
+}
+#guias, #bultos {
+    margin-top: 0;
+    float: left;
+    display: block;
+    font-size: 35px;
+    color: white;
+    border-bottom: 4px solid #9ea7af;/* y degradado */
+}
+#encabezado td:nth-child(9n) {
+    /* coloreamos la columna de % de Carga o Descarga */
+    color: #1065c0;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.nothing {
+    /* degradado */
+    background: #031B35; /* Old browsers */
+}
+#infobitacora th,
+#encabezado th,
+#guias,
+#bultos,
+#llegadas th,
+#bitacorasensucursal th,
+#encabezado-guias-para-sucursal th {
+    color: white;
+    background: black;
+}
+/*
+#background-degradado th {
+  line-height: 2.3;
+  font-weight: 100;
+}
+#background-degradado > tbody > tr:nth-child(2) > th {
+  line-height: 1.8;
+}
+#background-degradado > tbody > tr:nth-child(3) > th {
+    color: #0D4E94;
+  background: rgba(255,254,228,1.00);
+  font-weight: 100;
+    line-height: 1.6;
+}
+*/
+.padding-0 {
+    padding-left: 0 !important;
+}
+#infobitacora td {
+  font-size: 0.9em;
+    padding-left: 5px;
+/*  padding-left: 0.4em;*/
+  line-height: 1;
+  height: 1em;
+}
+
+#infobitacora td:nth-child(2), #infobitacora td:nth-child(3) {
+    padding-left: 0;
+}
+#detalle-flecha {
+    font-size: 1em;
+    text-align: center;
+    color: #9ECDFF;
+    background: black;
+}
+tracto {
+    color: #fff;
+/*    font-weight: 300;*/
+ /*   line-height: 1.2;*/
+/*    padding-top: 1px;*/
+  /*  float: left;*/
+  text-align: right;
+    clear: none;
+/*    margin-right: 4px;*/
+}
+/*
+bitacora {
+    float: left;
+    clear: none;
+    
+}*/
+
+#volumenes {
+  height: 32px;
+  background: black;
+  color: white;
+}
+#reloj {
+/*    float: right;
+    display: block;
+    clear: none;*/
+/*    padding-top: 1px;*/
+ /*   line-height: 1.1;*/
+  /*  margin: 0 10px;*/
+ /* font-weight: normal;*/
+/*    letter-spacing: -1px;*/
+/*    font-size: 34px;*/
+    text-align: right;
+}
+#guias {
+    padding-left: 30%;
+    text-align: center;
+}
+#encabezado {
+    width: 100%;
+    border: none;
+/*    height: 32px;*/
+    float: left;
+    clear: left;
+}
+#encabezado-guias-para-sucursal {
+  border: none;
+}
+#bitacorasensucursal {
+    width: 100%;
+    border: none;
+    height: 32px;
+    float: left;
+    clear: left;
+}
+/*
+.sub-encabezados-8 {
+    max-width: 60px;
+}
+*/
+/*
+#encabezado th {
+  color: #ddd;
+  font-size: 1em;
+  border-bottom: 1px solid #333;
+  padding-right: 24%;
+}
+*/
+#encabezado-guias-para-sucursal th {
+      border-bottom: 4px solid #9ea7af;
+}
+#content-bitacoras-transito,
+#content-bitacoras-llegadas,
+div#content-bitacoras-llegadas {
+  width: 320px;
+  height: 192px;
+}
+
+#bitacorasensucursal th {
+  color: #ddd;
+  font-size: 0.75em;
+  border-bottom: 1px solid #0077E2;
+  text-align: center;
+  word-wrap: normal;
+  word-break: break-word;
+  padding: 0;
+  margin: 0;
+}
+#bitacorasensucursal.enproceso th {
+text-align: right;
+padding-right: 1em;
+}
+ 
+#bitacorasensucursal td {
+  overflow: hidden;
+  white-space: normal;
+  font-size: 0.8em;
+  text-overflow: initial;
+  word-break: normal;
+  word-wrap: initial;
+  text-align: center;
+  /* padding-right: 1em; */
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  min-width: 24px;
+  /* max-width: 90px; */
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+#bitacorasensucursal td:first-child,
+#bitacorasensucursal td:last-child {
+  word-break: normal;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+#bitacorasensucursal tr th {
+  font-weight: 100;
+}
+#bitacorasensucursal > tbody > tr:nth-child(1) > th {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.2em 0 0 0;
+}
+#bitacorasensucursal.enproceso td {
+  padding: 0.2em 1em;
+}
+#bitacorasensucursal.enproceso  tr:nth-child(odd) td {
+  background-color: white;
+}
+#llegadas-fondo th {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    font-size: 28px;
+    color: #0D4E94;
+    background: rgba(255,254,228,1.00);
+    letter-spacing: -1px;
+    font-weight: 300;
+}
+#encabezado #porcentaje-centrado {
+    text-align: center;
+}
+#encabezado tr>td:nth-child(1) {
+    text-align: left;
+    /*   PRIMER COLUMNA: CIUDAD SIGLAS  */
+  /*  min-width: 195px;*/
+}
+.centered {
+margin-left: auto;
+clear: both;
+margin-right: auto;
+text-align: center !important;
+}
+
+#txtHint > table > tbody > tr > td {
+line-height: 1em;
+text-align: center;
+margin: 0;
+padding: 0;
+}
+
+
+
+.text-align-left {
+	text-align: left !important;
+}
+
+/*-------------------------------------------------------------
+2.1.2 ESTILOS PARA BITACORA DE CARGA - Detalle (parte Central)
+--------------------------------------------------------------*/
+
+#scroller {
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* height:940px;*/
+    height: 668px;
+}
+
+#listo {
+    color: #C2C8CF;
+}
+.fa-check-square:before {
+    font-size: 50px;
+    vertical-align: middle;
+    color: #5DCD6A;
+}
+form {
+    margin: 0;
+    padding: 0;
+}
+
+body#detalle_carga-tabla {
+/*  background: #000;*/
+  color: #fff;
+}
+
+#detalle_carga-tabla table,
+#detalle_carga-tabla td,
+#detalle_carga-tabla tr,
+#body-guias-para-sucursal table,
+#body-guias-para-sucursal tr,
+#body-guias-para-sucursal td {
+    line-height: 1;
+    margin: 0;/*  padding: 0;*/
+}
+#detalle_carga-tabla td,
+#body-guias-para-sucursal td {
+min-width: 1em;
+max-width: 1em;
+}
+.detalle_carga {
+    width: 100%;
+    margin: 0;
+}
+.detalle_carga tr {
+	border: none;
+  border-top: none;
+}
+
+/* coloreamos columnas de Almacen y Remolque (4, 5 y 7) */
+/*
+.detalle_carga td:nth-child(3n), .detalle_carga td:nth-child(4n), .detalle_carga td:nth-child(7n) {
+    
+    color: #D3D8DB;
+}
+*/
+/*
+.detalle_carga td:nth-child(2) {
+    color: #D3D8DB;
+}
+*/
+/*
+#background-degradado td:nth-child(n+3) {
+color: #D3D8DB;
+}
+
+#background-degradado td:nth-child(3n+5) {
+color: #1065c0;
+}
+*/
+.detalle_carga td:nth-child(4) {
+  /* A la Derecha de columna Bultos
+  Linea divisoria, colorea y separa Guías de los Bultos */
+  padding-right: 6px !important;
+  border-right: 3px #790000 double;
+}
+.detalle_carga td:nth-child(8n) {
+    /* Ultima columna */
+  /* coloreamos la columna de % de Carga o Descarga */
+    color: #9ECDFF;
+    letter-spacing: -1px;
+/*    padding-right: 20px;*/
+}
+.totales th {
+    border-top: 1px solid #555;
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    min-width: 0.5rem;
+    max-width: 2rem;
+    letter-spacing: -1px;
+    font-size: 1.3em;
+    text-align: right;
+    color: #ccc;
+    padding: 0 0.6em;
+}
+.totales th:nth-child(1) {
+    text-align: left;
+}
+.detalle_carga td {
+  /*  font-size: 2em;*/
+    padding: 0;
+}
+/*
+.detalle_carga td.alt {
+    font-size: 2em;
+}
+*/
+/*
+==============================================
+
+2.2 LLEGADASS
+
+=============================================== */
+#seccion-bitacorasensucursal {
+  background: #0D4E94;
+}
+
+#bitacoras-en-sucursal-v-escritorio {
+    padding: 0;
+    margin: 0 auto;
+/*    background: #0D4E94;*/
+background: white;
+}
+#llegadas {
+    margin: 0 auto;
+}
+#llegadas {
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    width: 97%;
+}
+#llegadas tr.alt {
+    color: rgb(0, 0, 0);
+}
+#llegadas td {
+    padding: 3px 7px 2px;
+    font-size: 2em;
+    line-height: 65px;
+}
+#llegadas th {
+  padding: 3px 7px 2px;
+  font-size: 38px;
+  color: white;
+  line-height: 52px;
+  border-bottom: 2px solid #ccc;
+}
+#llegadas th.alt {
+    color: rgba(13,78,148,1.00);
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 1em;
+}
+#llegadas tr>td:nth-child(1) {
+    /*   PRIMER COLUMNA: CIUDAD SIGLAS  */
+  /* "The browser will then set column widths based on the width of cells in the first row of the table" */
+  /*font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;*/
+/*  color: black;*/
+/*  font-size: 3.7rem;*/
+  /* If you need one ore more fixed-width columns while other columns should resize, try setting both min-width and max-width to the same value. */
+/*  min-width: 180px;
+  max-width: 180px;*/
+/*  text-align: left; 
+  letter-spacing: -2px;
+  */
+}
+#llegadas td:nth-child(n+2) {
+    /* alineamos todas las columnas a partir de la 3a que tenga numeros, a la Derecha */
+/*  text-align: right;  */
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    /*  min-width: 12%;*/
+    letter-spacing: -2px;
+    font-size: 3.2rem;
+    color: #818385;
+}
+#llegadas td:nth-child(5) {
+    color: #0D4E94;
+}
+.txt-red {
+    color: red;
+}
+.txt-blanco {
+    color: white;
+}
+
+
+/*
+==============================================
+
+2.3 GUIAS PARA SUCURSAL
+
+=============================================== */
+
+#body-guias-para-sucursal td {
+    border: solid 1px #aaa;
+}
+/*
+#background-degradado th {
+  border-right: solid 1px #fff;
+  padding: 0.2em 0.5em;
+}
+#background-degradado > tbody > tr:nth-child(3) > th:nth-child(1) {
+  text-align: left;
+}
+*/
+#guias-para-sucursal-header {
+border-bottom: 4px solid #9ea7af;
+}
+/*
+#background-degradado tr td:nth-child(n+3) {
+text-align: right;
+}
+#background-degradado {
+font-size: 1.4em;
+padding: 0.2em 0.5em;
+}
+#background-degradado tr td {
+  padding: 0.4em 0.5em;
+}
+#background-degradado .alt {
+background-color: #f4f4f4;
+}
+*/
+
+h1 {
+  font-size: 0.7em;
+  letter-spacing: 0px;
+  position: initial;
+  width:  100%;
+  text-align: center;
+  padding: 0;
+}
+/*
+#encabezado th {
+  color: whitesmoke;
+  font-size: 0.8em;
+}
+*/
+.totales th {
+  font-size: 1em;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  min-width: 0.5em;
+  max-width: 1.1em;
+}
+/*
+#encabezado tbody>tr>td {
+  min-width: 0.5em;
+  max-width: 1.5em;
+}
+*/
+
+#encabezado td,
+#encabezado-guias-para-sucursal td {
+ font-size: 0.7em;
+/* color: #D9D9D9;*/
+/* text-align: right;*/
+ text-transform: uppercase;
+/* min-width: 20px;*/
+/* line-height: 0.9;*/
+ padding: 0;
+ margin: 0;
+ letter-spacing: 0px;
+}
+#infobitacora {
+  margin-bottom: 0px !important;
+}
+/*
+#encabezado tbody>tr>td:nth-child(1) {
+  padding-left: 0.2em !important;
+}
+*/
+#reloj {
+/*  float: right;*/
+  display: block;
+  clear: none;
+/*  padding-top: 1px;
+  line-height: 1;*/
+  padding: 0;
+  margin: 0;
+letter-spacing: 0px;
+}
+h3, 
+h4, 
+tracto, 
+#reloj,
+h6, 
+hora,
+m3 {
+  font-size: 0.8em;
+}
+
+#infobitacora > tbody > tr:nth-child(2) > td {
+  height: 1em;
+}
+/*
+h3 {
+  text-transform: uppercase;
+}
+*/
+
+#volumenes {
+  height: 1em;
+}
+/*
+#encabezado th:first-child {
+  border-right: none;
+  padding-right: 5px;
+  padding-left: 10px;
+}
+*/
+#detalle_carga-tabla td, #body-guias-para-sucursal td {
+  min-width: 0.9em;
+  max-width: 1.8em;
+}
+.detalle_carga td:nth-child(4), .totales th:nth-child(4) {
+  padding-right: 0.1em;
+}
+#detalle_carga-tabla td, #body-guias-para-sucursal tr, #body-guias-para-sucursal table, #body-guias-para-sucursal td {
+  margin: 0;
+  padding: 0.1em 0.2em;
+  letter-spacing: -1px;
+}
+#scroller {
+  height: 8.3em !important;
+  overflow-y: hidden;
+  background: #000;
+}
+#encabezado th {
+/*  text-align: center;*/
+  font-size: 0.8em;
+/*  height: 20px;*/
+/*  vertical-align: bottom;*/
+}
+#infobitacora th {
+  font-size: 1em;
+  height: 0.9em;
+  line-height: 0.8;
+}
+
+#infobitacora {
+  padding: 0;
+  margin: 0;
+}
+.font-size-1 {
+  font-size: 1em !important;
+  padding-left: 5px;
+  line-height: 1.2;
+}
+
+h5.slabtextdone {
+  font-size: 0.9em;
+  line-height: normal;
+  height: initial;
+  padding: 0;
+}
+ .slabtext {
+  font-size: 0.7em;
+}
+#detalle_carga-tabla td,
+#body-guias-para-sucursal td {
+font-size: 1em;
+  letter-spacing: 0px;
+  font-weight: normal;
+  text-align: right;
+  text-align: -webkit-right;
+}
+
+status {
+  display: inline-block;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+
+body#detalle_carga-ancho {
+  margin: 3px 0 0 0;
+}
+
+
+
+
+}
+
+
+
+
+
+
+/*
+SCROLLBAR
+*/
+
+
+body::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #666;
+  outline: 1px solid #fff;
+}
+
+
+
+
+
+
+
+/*
+IE10 only
+
+
+#### ########    ##     #####   
+ ##  ##        ####    ##   ##  
+ ##  ##          ##   ##     ## 
+ ##  ######      ##   ##     ## 
+ ##  ##          ##   ##     ## 
+ ##  ##          ##    ##   ##  
+#### ########  ######   #####   
+
+
+*/
+
+ 
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here  Internet Exploder*/
+
+status {
+	height: 18px;
+/*	line-height: 38px;*/
+}
+
+#encabezado th {
+    height: 15px;
+    max-height: 15px;
+    letter-spacing: 1px;
+}
+
+.align-container {
+ position: relative; 
+}
+/*
+.align-bottom {  
+ position: absolute;
+ position: -ms-page; 
+ bottom: 14px;
+ width: 40%;
+ text-align: center;
+}
+*/
+
+
+
+scrollbar-arrow-color: #C0C0C0;
+scrollbar-base-color: #000000;
+scrollbar-track-color: #000000;
+scrollbar-face-color: #C0C0C0;
+scrollbar-3dlight-color: #000000;
+scrollbar-darkshadow-color: #000000;
+
+
+
+}
+
+

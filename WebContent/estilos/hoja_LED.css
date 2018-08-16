@@ -1,0 +1,1157 @@
+/*
+##       ######## ########
+##       ##       ##     ##
+##       ##       ##     ##
+##       ######   ##     ##
+##       ##       ##     ##
+##       ##       ##     ##
+######## ######## ########
+*/
+/*
+#scroller{overflow:hidden;}
+#scroller:hover{overflow-y:auto;}
+*/
+
+/* ---------------
+
+RESPONSIVE
+Media Queries
+
+--------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+body, frameset, html {
+  font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+  color: #9ECDFF;
+  background-color: black;
+  background: black;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  margin: 0;
+}
+h2, h3, h4, h5, h6 {
+  display: inline-block;
+}
+h1, h2, h3, h4, h5, h6, p, span, tr, td, th {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+h1 {
+    font-size: 17px;
+}
+h2 {
+    font-size: 16px;
+}
+#cronometro > h2 {
+    vertical-align: middle;
+    line-height: 1.2;
+}
+h3 {
+    font-size: 13px;
+}
+/*
+h4 {
+    font-size: 11px;
+}
+*/
+h5 {
+  font-size: 10px;
+}
+h6 {
+    font-size: 8px;
+/*    color: #0D4E94;*/
+    line-height: 1;
+ /*   padding: 0 10px;*/
+    margin: 0;
+    height: initial;
+    padding: 0;
+/*    text-align: right;*/
+    float: left;
+  }
+.height-1 {
+  height: 16px;
+  line-height: 0.35;
+}
+span {
+  font-size: 9px;
+}
+m3,
+.font-size-2 {
+  font-size: 7px;
+}
+ .colspan2 {
+   width: 90px; /*2 times the standard cell width of 100px - colspan2 */
+ }
+
+table {
+    /* no queremos que ocupe mucho espacio */
+    border-collapse: collapse;
+    /* a llenar la tabla en toda la ventana */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+font-cond-light {
+  font-family: 'futura_ltcn_btlight', Arial, sans-serif;
+}
+.color-1 {
+  /* light blue*/
+    color: #9ECDFF;
+  }
+/* secondary */
+.fila_excedente,
+.red {
+    color: #e31c3d !important;
+  }
+
+.green {
+  color: #1CE39B !important;
+}
+.porcentaje_excedente {
+    color: #ff0000 !important;
+  }
+.font-size-09, td.font-size-09 {
+    font-size: 0.9em !important;
+  }
+#invert, .background-black {
+    background-color: black;
+    color: #757575;
+}
+td.color-1 {
+    color: #9ECDFF !important;
+  }
+font,
+.texto_normal,
+#invert tr.fondo-2 {
+    color: white;
+}
+.background-black {
+  background-color: black;
+  color: #757575;
+}
+.centered {
+    margin-left: auto;
+    clear: both;
+    margin-right: auto;
+    text-align: center !important;
+  }
+  .right {
+    text-align: right;
+  }
+   .left {
+    text-align: left;
+  }
+  .center {
+  text-align: center;
+  }
+
+table#bitacorasenproceso1,
+div#content-bitacoras-llegadas {
+  /* padding-top: 2px; */
+  margin-top: 2px;
+}
+
+
+
+/*
+=============================================
+BLINK
+*/
+
+#alertaamarilla > td  {
+  color: black !important;
+}
+@keyframes alertaamarillaanim {
+     0% {color: red;}
+     50% {color: blue;}
+    100% {color: red;}
+}
+
+
+#alertaamarilla > td {
+  animation: alertaamarillaanim 2s infinite step-end;
+}
+
+#alertaroja > td {
+  color: white !important;
+}
+@keyframes alertarojaanim {
+     0% {color: white;}
+     50% {color: black;}
+    100% {color: white;}
+}
+#alertaroja > td {
+  animation: alertarojaanim 2s infinite step-end;
+}
+
+
+
+
+
+
+
+.blink-1s {
+    -webkit-animation: blinker .75s linear infinite;
+    -moz-animation: blinker .75s linear infinite;
+    animation: blinker .75s linear infinite;
+}
+
+@-moz-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+/*
+=========================================
+*/
+
+
+
+@media only screen and (min-width : 10px) and (max-width : 480px) {
+  /*===========================
+1. ESTILOS GLOBALES
+===========================*/
+/*
+* {
+  margin: 0;
+  padding: 0;
+}
+*/
+body, html {
+    border: none;
+    width: 100%;
+  }
+body, frameset, html {
+    background-color: black;
+  }
+table.detalle_carga {
+    border-top: 1px solid #1B1B1B;
+}
+#encabezado img {
+    vertical-align: text-top;
+}
+i.fa.fa-arrow-up.fa-fw, i.fa.fa-arrow-down.fa-fw {
+    font-size: 0.8em;
+    padding-right: 2px;
+}
+/*
+#detalle_carga-tabla td:nth-child(n+3),
+*/
+#body-guias-para-sucursal td:nth-child(n+3) {
+    text-align: right;
+}
+
+
+/*
+Color oficial de Paquetexpress:  #0D4E94
+*/
+.color-azul-paquetexpress {
+    color: #0D4E94;
+}
+/* invertimos para pantallas pequeñas */
+.color-2 {
+    color: white;
+}
+
+#encabezado th {
+    text-align: center;
+}
+.font-size-1 {
+    font-size: 10px;
+  }
+
+.underline-white {
+    color: white !important;
+  }
+#infobitacora>tbody>tr:nth-child(2)>td:nth-child(2)>h6 {
+    color: white;
+  }
+.fondo-1 tr, .infobitacora-tabla-1 {
+    /* El azul Oficial un poco + oscuro */
+    /*  background: #003E82;*/
+    background: #000;
+    /* background: #0D4E94;*/
+  }
+
+.fondo-2 tr {
+    background: #F5F5F5;
+}
+.fondo-3 {
+    color: black;
+}
+#tiempo-restante {
+    font-size: 0.7em;
+    background: #000;
+    color: #fff;
+}
+#tiempo-restante-retraso {
+  background: #000;
+  color: red;
+  border: none;
+}
+
+
+/* ======================================================== */
+/*
+  _      _                      _
+ | |    | |                    | |
+ | |    | | ___  __ _  __ _  __| | __ _ ___
+ | |    | |/ _ \/ _` |/ _` |/ _` |/ _` / __|
+ | |____| |  __/ (_| | (_| | (_| | (_| \__ \
+ |______|_|\___|\__, |\__,_|\__,_|\__,_|___/
+                 __/ |
+                |___/											*/
+
+/* para que se vea ARRIBA la pantalla inicial */
+tr.centered.p_llegadas_LED {
+    vertical-align: top;
+}
+table#bitacorasenproceso1 th {
+    padding: 3px 0;
+    vertical-align: middle;
+}
+.p_llegadas_LED th:nth-child(1),
+.p_llegadas_LED td:nth-child(1) {
+    width: 80px;
+}
+.p_llegadas_LED th:nth-child(2),
+.p_llegadas_LED td:nth-child(2) {
+    width: 60px;
+}
+/* horas de llegada y salida */
+.p_llegadas_LED th:nth-child(3),
+.p_llegadas_LED td:nth-child(3),
+.p_llegadas_LED th:nth-child(4),
+.p_llegadas_LED td:nth-child(4) {
+    width: 35px;
+}
+.p_llegadas_LED th:nth-child(5),
+.p_llegadas_LED th:nth-child(6),
+.p_llegadas_LED td:nth-child(5),
+.p_llegadas_LED td:nth-child(6) {
+    width: 25px;
+}
+.p_llegadas_LED th:nth-child(7),
+.p_llegadas_LED td:nth-child(7) {
+    width: 25px;
+}
+/*
+.detalle_carga td:nth-child(4)  {
+   padding-right: 0.1em;
+}
+*/
+
+/* para que quepa la nueva column... */
+tr.centered.p_llegadas_LED,
+tr.alt.centered.p_llegadas_LED {
+    font-size: 14px;
+}
+#bitacorasenproceso1 > thead > tr {
+    font-size: 12px;
+    border-bottom: 1px solid #444;
+}
+/*
+colores column1
+*/
+#invert td.col1 {
+   color: white;
+   text-align: left !important;
+   padding: 0 0 0 3px;
+}
+
+tr.centered.p_llegadas_LED > td:nth-child(2),
+tr.alt.centered.p_llegadas_LED > td:nth-child(2) {
+  /* color-5 */
+  color: #4FB8FF;
+}
+
+
+
+
+
+
+/*
+*********************************************
+*/
+
+
+  .btn-oldstyle-nofloat {
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    line-height: 2em;
+    height: 100%;
+  }
+  .txt__small, .txt__small--bold {
+    color: #8F8F8F;
+    font-size: 11px;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+
+  /*============================================================================
+2. ESTILOS ESTRUCTURALES
+==============================================================================*/
+
+  /*
+
+INDEX.HTML
+
+*/
+  #seccion-index {
+    background: #0D4E94;
+  }
+  .page-wrap {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .site-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .site-header>nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .site-header>nav>ul {
+    list-style: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .site-header>nav a {
+    background: white;
+    color: black;
+    padding: 5px 12px;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  .site-header a {
+    text-decoration: none;
+  }
+  .site-header .logo {
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: -0.1rem;
+  }
+  .banner {
+    text-align: center;
+    padding: 10px;
+  }
+  main {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 20px 40px 0 20px;
+  }
+  main .work {
+    -webkit-flex: 1 100%;
+    -ms-flex: 1 100%;
+    flex: 1 100%;
+  }
+  main .work div {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  main figure {
+    /*  border: 2px solid #ADD8E6;*/
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+  }
+  main img {
+    width: 40%;
+  }
+  main figcaption {
+    background-color: #009ceb;
+    background-image: -moz-linear-gradient(top, #00aaff, #0088cc);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00aaff),
+      to(#0088cc));
+    background-image: -webkit-linear-gradient(top, #00aaff, #0088cc);
+    background-image: -o-linear-gradient(top, #00aaff, #0088cc);
+    padding: 25px 0;
+    margin: 30px;
+  }
+  main figcaption:hover {
+    background: #2ABCF2;
+  }
+  footer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    background: #ADD8E6;
+  }
+  footer p {
+    height: 100%;
+    line-height: 50px;
+    padding: 0 5px;
+    margin: 0 auto 0 15px;
+  }
+  footer ul {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  footer li {
+    position: relative;
+    margin-right: 15px;
+  }
+  footer li:first-child {
+    margin-left: 15px;
+  }
+  footer a {
+    margin-top: -2px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    -webkit-transition: background-color .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
+  }
+  footer a:hover {
+    background: steelblue;
+  }
+
+  /*
+
+BITACORAS.HTML
+
+
+*/
+  .bitacoras-titulo {
+    font-size: 2em;
+    color: #888;
+  }
+
+  /*--------------------------------------------------------------------
+2.1 ESTILOS PARA BITACORA DE CARGA
+---------------------------------------------------------------------*/
+  div#s2id_select2aqui {
+    width: 95%;
+    font-size: 1.4em !important;
+  }
+  #select2aqui {
+    padding: 5px;
+    font-size: 1.4em;
+  }
+
+  /* Tamaño de texto en busqueda Cotizador */
+  .select2-search input {
+    font-size: 1.4em !important;
+  }
+  .select2-results .select2-result-label {
+    font-size: 1.4em !important;
+  }
+  .select2-container {
+    margin-top: 6px !important; */
+    margin-bottom: 9px !important;
+    */
+  }
+  .titulo-sucursal {
+    margin-left: 20px;
+  }
+
+  #bitacoras td, #bitacorasensucursal td {
+    padding: 5px;
+    font-size: 1.3em;
+  }
+  #bitacoras th, #bitacorasensucursal th {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 2em;
+  }
+  #bitacorasenproceso {
+    background: black;
+    color: white;
+  }
+
+/*--------------------------------------------------------------------
+2.1.1 ESTILOS PARA BITACORA DE CARGA - Info Bitacora (Parte Izquierda)
+--------------------------------------------------------------------*/
+  #separador-1 {
+    border-top: 1px solid black;
+  }
+  table#encabezado {
+    margin-top: 3px;
+  }
+
+#detalle_carga-ancho {
+    margin: 0;
+    padding: 0;
+  }
+
+  #detalle_carga-barra-izquierda,
+    #detalle_bitacora-tripulacion {
+    margin: 0;
+    min-width: 100%;
+    width: 100%;
+  }
+  #detalle_carga-barra-izquierda td {
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+  }
+  #infobitacora {
+    width: 90px;
+    padding: 0;
+    color: white;
+  /* ID de la tabla */
+    margin-top: 0.2em;
+    margin-bottom: 10px;
+  }
+  #infobitacora th {
+    font-size: 1em;
+    padding-left: 5px;
+    color: #D5DDE5;
+    line-height: 1;
+  }
+  #guias {
+    width: 45%;
+    padding-left: 15%;
+  }
+  #bultos {
+    width: 55%;
+    text-align: center;
+    clear: right;
+  }
+  #guias, #bultos {
+    margin-top: 0;
+    float: left;
+    display: block;
+    font-size: 35px;
+    color: white;
+    border-bottom: 4px solid #9ea7af; /* y degradado */
+  }
+  #encabezado td:nth-child(9n) {
+    /* coloreamos la columna de % de Carga o Descarga */
+    color: #1065c0;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+  .nothing {
+    background: #031B35; /* Old browsers */
+  }
+
+.float-right {
+  float: right !important;
+}
+.float-left {
+  float: left !important;
+}
+
+  #infobitacora th, #encabezado th, #guias, #bultos, #llegadas th,
+    #bitacorasensucursal th, #encabezado-guias-para-sucursal th {
+    color: white;
+    background: black;
+  }
+  .padding-0 {
+    padding-left: 0 !important;
+  }
+  #infobitacora td {
+    font-size: 0.9em;
+    padding-left: 5px;
+    /*
+    line-height: 1;
+/*    height: 1em;*/
+  }
+  #infobitacora td:nth-child(2), #infobitacora td:nth-child(3) {
+    padding-left: 0;
+  }
+  #detalle-flecha {
+    font-size: 1em;
+    text-align: center;
+    color: #9ECDFF;
+    background: black;
+  }
+  #volumenes {
+    float: left;
+    height: 13px;
+    background: black;
+    color: white;
+/*    text-align: center;*/
+  }
+
+.font-size-4,
+#txtHint > div > div > div {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+
+  #reloj,
+  #salida-esperada {
+    text-align: right;
+    display: block;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0px;
+  }
+
+  h2#salida-esperada {
+/*  float: right;*/
+  height: 19px;
+  vertical-align: middle;
+  }
+  span.font-size-4 {
+    line-height: 10px;
+    margin: 0;
+    padding: 0;
+}
+h5.color-1 {
+    line-height: 1.1;
+    vertical-align: middle;
+    /*
+    float: left;
+    */
+    margin-top: -1px;
+}
+.v-align {
+vertical-align: middle;
+}
+.flecha-y-tipo {
+  height: 13px;
+}
+.line-height-2 {
+  line-height: 20px;
+}
+  #guias {
+    padding-left: 30%;
+    text-align: center;
+  }
+  #encabezado {
+    width: 100%;
+    border: none;
+    float: left;
+    clear: left;
+  }
+  #encabezado-guias-para-sucursal {
+    border: none;
+  }
+  #bitacorasensucursal {
+    width: 100%;
+    border: none;
+    /*height: 32px;*/
+    float: left;
+    clear: left;
+  }
+  #encabezado-guias-para-sucursal th {
+    border-bottom: 4px solid #9ea7af;
+  }
+  #content-bitacoras-transito,
+  div#content-bitacoras-transito,
+  #content-bitacoras-llegadas,
+  div#content-bitacoras-llegadas
+    {
+    width: 320px;
+    height: 192px;
+  }
+  #bitacorasensucursal th {
+    color: #ddd;
+    font-size: 0.75em;
+    border-bottom: 1px solid #0077E2;
+    text-align: center;
+    word-wrap: normal;
+    word-break: break-word;
+    padding: 0;
+    margin: 0;
+  }
+  #bitacorasensucursal.enproceso th {
+    text-align: right;
+    padding-right: 1em;
+  }
+  #bitacorasensucursal td {
+    overflow: hidden;
+    white-space: normal;
+    font-size: 0.8em;
+    text-overflow: initial;
+    word-break: normal;
+    word-wrap: initial;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    min-width: 24px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+  }
+  #bitacorasensucursal td:first-child, #bitacorasensucursal td:last-child
+    {
+    word-break: normal;
+    white-space: nowrap;
+    word-wrap: normal;
+  }
+  #bitacorasensucursal tr th {
+    font-weight: 100;
+  }
+  #bitacorasensucursal>tbody>tr:nth-child(1)>th {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.2em 0 0 0;
+  }
+  #bitacorasensucursal.enproceso td {
+    padding: 0.2em 1em;
+  }
+  #bitacorasensucursal.enproceso  tr:nth-child(odd) td {
+    background-color: white;
+  }
+  #llegadas-fondo th {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    font-size: 28px;
+    color: #0D4E94;
+    background: rgba(255, 254, 228, 1.00);
+    letter-spacing: -1px;
+    font-weight: 300;
+  }
+  #encabezado #porcentaje-centrado {
+    text-align: center;
+  }
+
+  #encabezado tr>td:nth-child(1),
+  /*   PRIMER COLUMNA: CIUDAD SIGLAS  */
+  table.detalle_carga td:nth-child(1) {
+    text-align: left;
+    padding-left: 5px;
+  }
+
+  #txtHint>table>tbody>tr>td {
+/*    line-height: 1em;*/
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .text-align-left {
+    text-align: left !important;
+  }
+
+  /*-------------------------------------------------------------
+2.1.2 ESTILOS PARA BITACORA DE CARGA - Detalle (parte Central)
+--------------------------------------------------------------*/
+  #scroller {
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 668px;
+  }
+  #listo {
+    color: #C2C8CF;
+  }
+  .fa-check-square:before {
+    font-size: 50px;
+    vertical-align: middle;
+    color: #5DCD6A;
+  }
+body#detalle_carga-tabla {
+    /*  background: #000;*/
+    color: #fff;
+  }
+#body-guias-para-sucursal td {
+    min-width: 1em;
+    max-width: 1em;
+  }
+.detalle_carga {
+    width: 100%;
+  }
+/* coloreamos columnas de Almacen y Remolque (4, 5 y 7) */
+/*
+.detalle_carga td:nth-child(3n), .detalle_carga td:nth-child(4n), .detalle_carga td:nth-child(7n) {
+    color: #D3D8DB;
+}
+*/
+  /*
+.detalle_carga td:nth-child(2) {
+    color: #D3D8DB;
+}
+*/
+.detalle_carga td:nth-child(4) {
+    /* A la Derecha de columna Bultos
+  Linea divisoria, colorea y separa GuÃ­as de los Bultos */
+    padding-right: 5px !important;
+    border-right: 3px #790000 double;
+  }
+  .detalle_carga td:nth-child(8n) {
+    /* Ultima columna */
+    /* coloreamos la columna de % de Carga o Descarga */
+    color: #9ECDFF;
+    /*
+    letter-spacing: -1px;*/
+    /*    padding-right: 20px;*/
+  }
+  .totales th {
+    border-top: 1px solid #555;
+/*    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;*/
+    min-width: 0.5rem;
+    max-width: 2rem;
+    letter-spacing: -1px;
+    font-size: 1.3em;
+    text-align: right;
+    color: #ccc;
+    padding: 0 0.6em;
+  }
+  .totales th:nth-child(1) {
+    text-align: left;
+  }
+  .detalle_carga td {
+    padding: 0;
+    min-width: 20px;
+  }
+
+tr.totales {
+    line-height: 1.5;
+}
+
+/*
+==============================================
+
+2.2 LLEGADASS
+
+=============================================== */
+  #seccion-bitacorasensucursal {
+    background: #0D4E94;
+  }
+  #bitacoras-en-sucursal-v-escritorio {
+    padding: 0;
+    margin: 0 auto;
+    /*    background: #0D4E94;*/
+    background: white;
+  }
+
+table.detalle_carga {
+  text-align: right;
+}
+
+
+  #llegadas td:nth-child(5) {
+    color: #0D4E94;
+  }
+
+  .txt-red {
+    color: red;
+  }
+  .txt-blanco {
+    color: white;
+  }
+
+  /*
+==============================================
+
+2.3 GUIAS PARA SUCURSAL
+
+=============================================== */
+#body-guias-para-sucursal td {
+    border: solid 1px #aaa;
+  }
+#guias-para-sucursal-header {
+    border-bottom: 4px solid #9ea7af;
+  }
+
+.totales th {
+    font-size: 1em;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    min-width: 0.5em;
+    max-width: 1.1em;
+  }
+
+#encabezado td, #encabezado-guias-para-sucursal td {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0px;
+  }
+
+  #encabezado-guias-para-sucursal td:nth-child(n+5) {
+    text-align: center;
+}
+
+
+#infobitacora {
+    margin-bottom: 0px !important;
+  }
+
+#infobitacora>tbody>tr:nth-child(2)>td {
+    height: 1em;
+  }
+.font-size-1-3 {
+    font-size: 18px !important;
+  }
+#body-guias-para-sucursal td,
+#bitacorasenprocesoensuc td {
+    min-width: 0.9em;
+    max-width: 1.8em;
+  }
+.totales th:nth-child(4) {
+    padding-right: 0.1em;
+  }
+#body-guias-para-sucursal tr,
+#body-guias-para-sucursal table, #body-guias-para-sucursal td {
+    padding: 0.1em 0.2em;
+}
+#scroller {
+    height: 8.3em !important;
+    overflow-y: hidden;
+    background: #000;
+}
+#encabezado th {
+    font-size: 0.8em;
+}
+  #infobitacora th {
+    font-size: 1em;
+    height: 0.9em;
+    line-height: 0.8;
+  }
+.font-size-1 {
+/*    font-size: 1em !important;*/
+    padding-left: 5px;
+    line-height: 1.1;
+  }
+
+  table#bitacorasenproceso,
+  #body-guias-para-sucursal td {
+    font-size: 1em;
+    letter-spacing: 0px;
+    font-weight: normal;
+    text-align: right;
+    text-align: -webkit-right;
+}
+status {
+    display: inline-block;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+body#detalle_carga-ancho {
+    width: 87px;
+    height: 192px;
+    margin: 3px 2px 0 2px;
+    border-right: 1px solid #9ECDFF;
+    padding-right: 5px;
+}
+.detalle_carga-divs {
+    width: 85px;
+    margin-right: 5px;
+}
+/*
+SCROLLBAR
+*/
+body::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #666;
+  outline: 1px solid #fff;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+IE10 only
+
+
+#### ########    ##     #####
+ ##  ##        ####    ##   ##
+ ##  ##          ##   ##     ##
+ ##  ######      ##   ##     ##
+ ##  ##          ##   ##     ##
+ ##  ##          ##    ##   ##
+#### ########  ######   #####
+
+
+*/
+@media all and (-ms-high-contrast: none) , ( -ms-high-contrast : active)
+  {
+  /* IE10+ CSS styles go here  Internet Exploder*/
+  status {
+    height: 18px;
+    /*	line-height: 38px;*/
+  }
+  #encabezado th {
+    height: 15px;
+    max-height: 15px;
+    letter-spacing: 1px;
+  }
+  .align-container {
+    position: relative;
+  }
+
+}

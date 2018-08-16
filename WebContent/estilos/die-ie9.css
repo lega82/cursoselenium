@@ -1,0 +1,14 @@
+main figure {
+    width: 38%;
+    display: inline-block;
+}
+
+main img {
+    width: 60%;
+}
+
+
+.txt-bubble-80 {
+    width: 50%;
+    margin: 0 auto;
+}

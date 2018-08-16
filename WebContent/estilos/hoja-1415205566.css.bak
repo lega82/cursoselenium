@@ -1,0 +1,1607 @@
+/* =================================================================
+   Proyecto: Trazabilidad
+   =================================================================
+
+
+1. Estilos Globales
+2. Estilos estructurales
+    2.1. Estilos para Bitacora de Carga
+    2.1.1 Estilos para Bitacora de Carga - Seccion Bitacora (la parte izquierda)
+    2.1.2 Estilos para Bitacora de Carga - Seccion Encabezado (la parte superior)
+    2.1.2 Estilos para Bitacora de Carga - Seccion Detalle (la central)
+3. Responsive
+
+-------------------------------------------------------------------*/
+
+
+
+
+
+/*===========================
+1. ESTILOS GLOBALES
+===========================*/
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/* 
+Color oficial de Paquetexpress:  #0D4E94
+*/
+.color-azul-paquetexpress {
+    color: #0D4E94;
+}
+.color-2 {
+/*    color: #748187;*/
+color: black;
+}
+body, td, th {
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeSpeed;
+}
+body, html {
+    border: none;
+    margin: 0;
+    padding: 0;
+    /*  padding-right: 5px;*/
+    width: 100%;
+    line-height: 1.2;
+}
+h1, h2, h3, h4, h5, h6, p, span, tr, td, th {
+    margin: 0;
+    padding: 0;
+}
+table {
+    /* no queremos que ocupe mucho espacio */
+    border-collapse: collapse;
+    /* a llenar la tabla en toda la ventana */
+    width: 99%;
+    height: 100%;
+    /*  white-space: nowrap;*/
+  /*  overflow: hidden;*/
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    font-size: 21px;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.4);
+    letter-spacing: -1px;
+    font-weight: 300;
+    margin: 0;
+    padding: 1px 8px 5px 8px;
+    position: absolute;
+    float: left;
+    text-align: center;
+    font-style: normal;
+    top: 5px;
+    border: 1px dotted #9ea7af;
+}
+status {
+    text-align: center;
+    display: inline-block;
+}
+h2, status {
+    font-size: 1.5em;
+    font-family: 'futura_bdcn_btbold', 'Futura BdCn BT', Arial, sans-serif;
+    letter-spacing: -1px;
+    text-align: center;
+}
+h3 {
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.2;
+    float: left;
+    clear: right;
+    padding-top: 1px;
+    color: white;
+}
+h4 {
+    /*  font-family: 'futura_bdcn_btbold', 'Futura BdCn BT', Arial, sans-serif;*/
+    font-weight: 300;
+    font-size: 0.7em;
+    color: #464646;
+}
+h5 {
+    /*    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;*/
+/*font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 51px;
+    color: white;
+    line-height: 1.4;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    letter-spacing: -2px;
+    float: left;
+    clear: both;
+    font-weight: 900;
+}
+h6 {
+    color: #0D4E94;
+}
+
+#infobitacora > tbody > tr:nth-child(2) > td:nth-child(2) > h6 {
+ color: white;    
+}
+
+
+h6, hora {
+    font-family: 'futura_bdcn_btbold', 'Futura BdCn BT', Arial, sans-serif;
+    font-size: 60px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+hora {
+    float: right;
+    padding-right: 10px;
+}
+.color-1 {
+    color: rgb(113, 187, 255);
+}
+.fondo-1 tr, .infobitacora-tabla-1 {
+    /* El azul Oficial un poco + oscuro */
+/*  background: #003E82;*/
+    background: #001A30;/* background: #0D4E94;*/
+}
+
+
+#txtHint > table > tbody > tr {
+    background: white !important;
+}
+
+.fondo-2 tr {
+    background: #F5F5F5;
+}
+.tracto tr {
+/*  height: 50px;*/
+}
+/*.tracto tr.even, .tracto tr.alt, .tracto tr:nth-of-type(even) {
+    background: #e9e9e9;
+}*/
+.fondo-3 {
+    color: black;
+}
+#tiempo-restante {
+    background: #F5F5F5;
+    /* background: red;*/
+    color: #0D4E94;
+}
+#tiempo-restante-retraso {
+    /* background: #F5F5F5;*/
+    background: red;
+    color: white;
+    border-top: 1px solid #FFF700;
+}
+/*============================================================================
+2. ESTILOS ESTRUCTURALES
+==============================================================================*/
+
+/*--------------------------------------------------------------------
+2.1 ESTILOS PARA BITACORA DE CARGA
+---------------------------------------------------------------------*/
+
+
+#bitacoras {
+    width: 50%;
+}
+#bitacoras td {
+    padding: 3px 7px 2px;
+    font-size: 1em;
+}
+#bitacoras th {
+    padding: 3px 7px 2px;
+    font-size: 1em;
+}
+#bitacoras th {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 2em;
+}
+
+/*
+#bitacoras tr.alt td {
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+}
+*/
+/*--------------------------------------------------------------------
+2.1.1 ESTILOS PARA BITACORA DE CARGA - Info Bitacora (Parte Izquierda)
+--------------------------------------------------------------------*/
+
+#separador-1 {
+    border-top: 1px solid black;
+}
+#detalle_carga-barra-izquierda, #detalle_carga-ancho {
+    margin: 0 5px;
+    min-width: 99%;
+    max-width: 291px;
+}
+#detalle_carga-barra-izquierda td {
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+.sombra {
+    -webkit-box-shadow: 0 5px 3px 1px #757575;
+    -moz-box-shadow: 0 5px 3px 1px #757575;
+    box-shadow: 0 5px 3px 1px #757575;
+}
+#infobitacora {
+    /* ID de la tabla */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 0;
+    color: white;
+    -webkit-box-shadow: 0 4px 3px 1px #9ea7af;
+    -moz-box-shadow: 0 4px 3px 1px #9ea7af;
+    box-shadow: 0 4px 3px 1px #9ea7af;
+}
+#infobitacora th {
+    font-size: 2em;
+    padding-left: 12px;
+    color: #D5DDE5;
+    /*  color:white;*/
+  /*border-bottom: 2px solid #1686FF;*/
+    border-bottom: 1px solid #003A78;
+    line-height: 2;
+    /* y degradado */
+    height: 55px;
+}
+#guias {
+    width: 45%;
+    padding-left: 15%;
+}
+#bultos {
+    width: 55%;
+    text-align: center;
+    clear: right;
+}
+#guias, #bultos {
+    margin-top: 5px;
+    float: left;
+    display: block;
+    font-size: 35px;
+    color: white;
+    border-bottom: 4px solid #9ea7af;/* y degradado */
+}
+#encabezado td:nth-child(9n) {
+    /* coloreamos la columna de % de Carga o Descarga */
+    color: #1065c0;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.nothing {
+    /* degradado */
+    background: #031B35; /* Old browsers */
+}
+#infobitacora th, #encabezado th, #guias, #bultos, #llegadas th {
+    /* degradado */
+    background: #0D4E94; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzEyMzE2YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #0D4E94 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0D4E94), color-stop(100%, #000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #0D4E94 0%, #000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #0D4E94 0%, #000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #0D4E94 0%, #000000 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #0D4E94 0%, #000000 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0D4E94', endColorstr='#000000', GradientType=0 );   /* IE6-8 */
+}
+.padding-0 {
+    padding-left: 0 !important;
+}
+#infobitacora th:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#encabezado th:first-child {
+    border-top-left-radius: 5px;
+}
+#infobitacora th:last-child {
+    border-top-right-radius: 5px;
+    padding-right: 5px;
+}
+#encabezado th:first-child {
+    border-right: none;
+    padding-right: 5px;
+    padding-left: 250px;
+}
+#infobitacora td {
+    font-size: 1.8em;
+    padding-left: 12px;
+    line-height: 1.2;
+}
+#infobitacora td:nth-child(2), #infobitacora td:nth-child(3) {
+    padding-left: 0;
+}
+#detalle-flecha {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    background: black;
+}
+tracto {
+    color: slategray;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-top: 1px;
+    float: left;
+    clear: none;
+    margin-right: 8px;
+}
+bitacora {
+    clear: none;
+    float: left;
+}
+#volumenes {
+    height: 35px;
+    background: white;
+}
+#reloj {
+    float: right;
+    display: block;
+    clear: none;
+    padding-top: 1px;
+    line-height: 1.1;
+    margin: 0 10px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 34px;
+}
+#guias {
+    padding-left: 30%;
+    text-align: center;
+}
+#encabezado {
+    width: 100%;
+    border: none;
+    /*  margin-top: 5px;*/
+    height: 36px;
+    float: left;
+    clear: left;
+}
+.sub-encabezados-8 {
+    min-width: 50px;
+    max-width: 60px;
+}
+#encabezado th {
+    color: whitesmoke;
+    font-size: 37px;
+    border-bottom: 4px solid #9ea7af;
+    padding-right: 24%;
+}
+#encabezado td {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    font-size: 28px;
+    color: #0D4E94;
+    background: rgba(255,254,228,1.00);
+    text-align: right;
+    padding-right: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: 300;
+    min-width: 87px;
+    max-width: 87px;
+    line-height: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#llegadas-fondo th {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    font-size: 28px;
+    color: #0D4E94;
+    background: rgba(255,254,228,1.00);
+    /*  text-transform: uppercase;*/
+    letter-spacing: -1px;
+    font-weight: 300;/*  min-width: 87px;
+  max-width: 87px;*/
+}
+#encabezado #porcentaje-centrado {
+    text-align: center;
+}
+#encabezado tbody>tr>td:nth-child(1) {
+    text-align: left;
+    letter-spacing: 0;
+    /*   PRIMER COLUMNA: CIUDAD SIGLAS  */
+  /* "The browser will then set column widths based on the width of cells in the first row of the table" */
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    /* If you need one ore more fixed-width columns while other columns should resize, try setting both min-width and max-width to the same value. */
+  /*  min-width: 195px;*/
+    min-width: 4em;
+    max-width: 4em;
+    padding-left: 5px;
+}
+/*-------------------------------------------------------------
+2.1.2 ESTILOS PARA BITACORA DE CARGA - Detalle (parte Central)
+--------------------------------------------------------------*/
+
+
+#scroller {
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* height:940px;*/
+    height: 668px;
+}
+/*
+#detalle_carga-tabla {
+}
+*/
+
+#listo {
+    color: #C2C8CF;
+}
+.fa-check-square:before {
+    font-size: 50px;
+    vertical-align: middle;
+    color: #5DCD6A;
+}
+/*
+.tabla-ancho-1 {
+}
+*/
+
+form {
+    margin: 0;
+    padding: 0;
+}
+.detalle_carga-tabla table, #detalle_carga-tabla td, #detalle_carga-tabla tr {
+    line-height: 0.8;
+    margin: 0;/*  padding: 0;*/
+}
+.detalle_carga {
+    width: 100%;
+    margin: 0;
+}
+.detalle_carga tr {
+    border-top: 1px dotted #D2DCE4;
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    /*   PRIMER COLUMNA: CIUDAD SIGLAS  */
+  /* "The browser will then set column widths based on the width of cells in the first row of the table" */
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    color: black;
+    font-size: 5.5rem;
+    /* If you need one ore more fixed-width columns while other columns should resize, try setting both min-width and max-width to the same value. */
+    min-width: 180px;
+    max-width: 180px;
+    letter-spacing: -3px;
+}
+.detalle_carga td:nth-child(n+2) {
+    /* alineamos todas las columnas a partir de la 3a que tenga numeros, a la Derecha */
+    text-align: right;
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    min-width: 11%;
+    letter-spacing: -3px;
+    font-size: 4.7rem;
+    color: black;
+}
+.detalle_carga td:nth-child(3n), .detalle_carga td:nth-child(4n), .detalle_carga td:nth-child(7n) {
+    /* coloreamos columnas de Almacen y Remolque (4, 5 y 7) */
+    color: #6E7173;
+}
+.detalle_carga td:nth-child(2) {
+    color: #4F4F4F;
+}
+/*
+.detalle_carga td:nth-child(3), .detalle_carga td:nth-child(4) {
+    color: #9B9B9B;
+}
+*/
+.detalle_carga td:nth-child(4) {
+    /* A la Derecha de columna Bultos
+  Linea divisoria, colorea y separa Guías de los Bultos */
+    padding-right: 20px;
+    border-right: 4px #C4C4C4 double;
+}
+
+    /* 
+    .totales th:nth-child(4) {
+
+    A la Derecha de columna Bultos
+  Linea divisoria, colorea y separa Guías de los Bultos 
+    padding-right: 20px;
+    border-right: 4px #C4C4C4 double;
+}
+*/
+
+/* izquierda de columna Bultos  
+.detalle_carga td:nth-child(6) {
+  border-left: 1px dotted red;
+}
+*/
+
+
+.detalle_carga td:nth-child(8n) {
+    /* Ultima columna */
+  /* coloreamos la columna de % de Carga o Descarga */
+    color: #1065c0;
+    letter-spacing: -1px;
+    padding-right: 20px;
+}
+.detalle_carga tbody>tr:last-child {
+    font-size: 2rem;
+}
+.totales th {
+    border-top: 4px solid #DBE4EB;
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    min-width: 0.5rem;
+    max-width: 3rem;
+    letter-spacing: -2px;
+    font-size: 1.7em;
+    text-align: right;
+    color: #444;
+    padding: 0 0.6em;
+}
+.totales th:nth-child(1) {
+    text-align: left;
+    letter-spacing: -2px;
+}
+.detalle_carga td {
+    font-size: 2em;
+    padding: 0;
+}
+.detalle_carga td.alt {
+    font-size: 2em;
+}
+/* 
+==============================================
+
+LLEGADASS
+
+=============================================== */
+
+#bitacoras-en-sucursal-v-escritorio {
+    padding: 0;
+    margin: 20px auto;
+}
+#llegadas {
+    margin: 0 auto;
+}
+#llegadas {
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    width: 97%;
+}
+#llegadas tr.alt {
+    color: rgb(0, 0, 0);
+}
+#llegadas td {
+    padding: 3px 7px 2px;
+    font-size: 2em;
+    line-height: 65px;
+}
+#llegadas th {
+    padding: 3px 7px 2px;
+    font-size: 38px;
+    /*	text-align: left; */
+    color: rgba(13,78,148,1.00);
+    /*    padding-top: 5px; 
+    padding-bottom: 4px; */
+/*    font-size: 1em; */
+    line-height: 52px;
+    border-bottom: 2px solid #ccc;
+}
+#llegadas th.alt {
+    color: rgba(13,78,148,1.00);
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 1em;
+}
+#llegadas tbody>tr>td:nth-child(1) {
+    /*   PRIMER COLUMNA: CIUDAD SIGLAS  */
+  /* "The browser will then set column widths based on the width of cells in the first row of the table" */
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    color: black;
+    font-size: 3.7rem;
+    /* If you need one ore more fixed-width columns while other columns should resize, try setting both min-width and max-width to the same value. */
+/*  min-width: 180px;
+  max-width: 180px;*/
+    letter-spacing: -2px;
+}
+#llegadas td:nth-child(n+2) {
+    /* alineamos todas las columnas a partir de la 3a que tenga numeros, a la Derecha */
+/*  text-align: right;  */
+    font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+    /*  min-width: 12%;*/
+    letter-spacing: -2px;
+    font-size: 3.2rem;
+    color: #818385;
+}
+/*
+#llegadas  td:nth-child(2),
+#llegadas  td:nth-child(3), 
+#llegadas  td:nth-child(4) {
+    color: #A6AAB0;
+}
+*/
+
+#llegadas td:nth-child(5) {
+    color: #0D4E94;
+}
+.txt-red {
+    color: red;
+}
+.txt-blanco {
+    color: white;
+}
+
+/* iPads (landscape) ----------- 
+
+
+  _ _____          _   _                     _                          
+ (_)  __ \        | | | |                   | |                         
+  _| |__) |_ _  __| | | |     __ _ _ __   __| |___  ___ __ _ _ __   ___ 
+ | |  ___/ _` |/ _` | | |    / _` | '_ \ / _` / __|/ __/ _` | '_ \ / _ \
+ | | |  | (_| | (_| | | |___| (_| | | | | (_| \__ \ (_| (_| | |_) |  __/
+ |_|_|   \__,_|\__,_| |______\__,_|_| |_|\__,_|___/\___\__,_| .__/ \___|
+                                                            | |         
+                                                            |_|         
+
+*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { /* STYLES GO HERE */
+}
+/* Styles */
+
+
+/* does it workkkkk??????? */
+/* P.S.: It worked :) */
+/* 
+body {
+    background-color: blue;
+}
+*/
+
+
+#detalle_carga-barra-izquierda, #detalle_carga-ancho {
+    margin: 0 2px;
+    min-width: 100%;
+    max-width: 291px;
+}
+#scroller {
+    height: 676px;
+}
+#infobitacora {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.fa-2x {
+    font-size: 2em;
+}
+h2, status {
+    font-size: 3.3rem;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+h3, tracto {
+    font-size: 30px;
+}
+h4 {
+    font-size: 2rem;
+}
+#volumenes {
+    height: 45px;
+}
+#infobitacora td {
+    font-size: 1.6em;
+    height: 66px;
+}
+#reloj {
+    font-size: 3.2rem;
+}
+#infobitacora {
+    margin-bottom: 5px;
+}
+#infobitacora th {
+    color: #FFFFFF;
+    height: 45px;
+    line-height: 1.3;
+}
+h5 {
+    font-size: 2.6rem;
+    letter-spacing: -2px;
+}
+h6, hora {
+    font-size: 2.3rem;
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    font-size: 4.2rem;
+}
+.detalle_carga td:nth-child(n+2) {
+    font-size: 3.2rem;
+    letter-spacing: -2px;
+}
+#guias {
+    padding-left: 40%;
+}
+#guias, #bultos {
+    font-size: 2.3rem;
+    margin-top: 0;
+    border-bottom: 0;
+}
+#encabezado td {
+    font-size: 1.3rem;
+    height: 45px;
+    min-width: 40px;
+    max-width: 43px;
+    line-height: 1.1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0;
+}
+}
+
+/* iPads (landscape) ----------- 
+
+
+      __  ____     __     __           ______  __    ___  
+     /_ ||___ \   / /    / /          |____  |/ /   / _ \ 
+      | |  __) | / /_   / /_   __  __     / // /_  | (_) |
+      | | |__ < | '_ \ | '_ \  \ \/ /    / /| '_ \  > _ < 
+      | | ___) || (_) || (_) |  >  <    / / | (_) || (_) |
+      |_||____/  \___/  \___/  /_/\_\  /_/   \___/  \___/ 
+                                                      
+                                                      
+
+*/
+
+
+@media only screen and (min-device-width : 1340px) and (max-device-width : 1366px) and (orientation : landscape) {
+/* STYLES GO HERE */}
+/* @media only screen and (device-height: 768px) and (device-width: 1366px) {*/
+
+/* @media all and (min-height: 721px) and (max-height: 768px) and (min-width: 1360px) and (max-width: 1366px) {*/
+    /*
+    1366 x 768 px
+    Ratio:                                      16:9
+    Market Share Perc. (Dec 2012 to Dec 2013):  25.88%
+    */
+
+#guias {
+    padding-left: 35%;
+}
+/* GREEN KILL EYES 
+body {
+  
+    background-color: #00ED00;
+}
+*/
+
+#scroller {
+    height: 620px;
+}
+#infobitacora {
+    margin-bottom: 5px;
+}
+#infobitacora th {
+    height: 43px;
+}
+#infobitacora td {
+    height: 65px;
+}
+#encabezado td {
+    font-size: 1.6rem;
+    height: 39px;
+    min-width: 55px;
+    max-width: 75px;
+    line-height: 1.1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0;
+    padding-right: 20px;
+}
+
+#encabezado tbody>tr>td:nth-child(1) {
+min-width: 5em;
+max-width: 5em;
+}
+
+#encabezado tbody>tr>td:nth-child(1) {
+    padding-left: 15px;
+}
+h2, status {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 1em;
+}
+.fa-2x {
+    font-size: 2em;
+}
+.detalle_carga td:nth-child(4), .totales th:nth-child(4) {
+    padding-right: 30px;
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    /* Siglas 1er columna */
+/*  font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;*/
+    padding-left: 15px;
+    letter-spacing: -1px;
+    font-size: 5.1rem;
+}
+.detalle_carga-tabla table, #detalle_carga-tabla td, #detalle_carga-tabla tr {
+    line-height: 1.2;
+    margin: 0;
+    padding-left: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+h5 {
+    font-size: 2em;
+    letter-spacing: -2px;
+    font-weight: bold;
+    height: 75px;
+}
+h6, hora {
+    font-size: 1.3em;
+}
+.detalle_carga td:nth-child(n+2) {
+    font-size: 4.3rem;
+}
+.totales th {
+    padding: 0 0.5em;
+    line-height: 1;
+}
+
+.totales th:nth-child(1) {
+    padding-left: 0.2em;
+    padding-right: 1.8em;
+}
+
+@-moz-document url-prefix() { 
+ /* FIREFOX ONLY STYLES */
+  .totales th:nth-child(1) {
+      min-width: 140px;
+/*    color: red;*/
+}
+}
+
+}
+
+
+/* 
+    ==========================================================
+    ==========================================================
+    ==========================================================
+
+
+
+   3.1- Responsive 
+   
+  _____       _        _ _      
+ |  __ \     | |      | | |     
+ | |  | | ___| |_ __ _| | | ___ 
+ | |  | |/ _ \ __/ _` | | |/ _ \
+ | |__| |  __/ || (_| | | |  __/
+ |_____/ \___|\__\__,_|_|_|\___|
+                                           
+  
+  
+   
+   ========================================================= */
+
+
+@media screen (max-width: 900px) {
+/* Cabecera y sidebar tienen media queries, ya que cada frame se 
+   rige por su propio width                                       */
+
+.detalle_carga td:nth-child(n+3) {
+ letter-spacing: -3px;
+}
+ .totales th {
+ letter-spacing: -4px;
+ font-size: 60px;
+}
+ .tabla-ancho-1 {
+ min-width: 215px;
+ max-width: 260px;
+}
+ .sub-encabezados-8 {
+ min-width: 60px !important;
+ max-width: 66px !important;
+}
+ #encabezado tbody>tr>td:nth-child(1) {
+ font-size: 19px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+ #encabezado th:first-child {
+ padding-right: 0;
+ padding-left: 40px;
+ text-align: center;
+}
+ #encabezado th {
+ padding-right: 21%;
+ padding-left: 0;
+ padding-bottom: 0;
+ padding-top: 1px;
+ font-size: 50px;
+ font-weight: 300;
+}
+ #encabezado td {
+ font-size: 24px;
+ word-wrap: break-word;
+ vertical-align: middle;
+ text-align: right;
+ padding-left: 0;
+ margin: 0;
+ padding-right: 0;
+}
+ table {
+ width: 97%;
+}
+ #flecha {
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+ .detalle_carga-tabla table, #detalle_carga-tabla td, #detalle_carga-tabla tr {
+ padding-right: 10px;
+ line-height: 0.9;
+ min-width: 75px;
+ max-width: 80px;
+ letter-spacing: -1px;
+}
+ .detalle_carga tbody>tr>td:nth-child(1) {
+ font-size: 4.2rem;
+ width: 250px !important;
+ padding: 10px 0;
+ letter-spacing: -4px;
+}
+}
+
+/* ==========================================================
+
+
+
+   3.2- Responsive 
+   
+  ____  _ _                                
+ |  _ \(_) |                               
+ | |_) |_| |_ __ _  ___ ___  _ __ __ _ ___ 
+ |  _ <| | __/ _` |/ __/ _ \| '__/ _` / __|
+ | |_) | | || (_| | (_| (_) | | | (_| \__ \
+ |____/|_|\__\__,_|\___\___/|_|  \__,_|___/
+                                           
+  
+   
+   ========================================================= */
+
+
+@media all and (min-width: 1601px) {
+#llegadas h3 {
+    font-size: 50px;
+    letter-spacing: -1px;
+}
+#llegadas th {
+    font-size: 42px;
+    line-height: 62px;
+    letter-spacing: -1px;
+}
+#llegadas td {
+    /*    font-size: 2em;*/
+    line-height: 72px;
+}
+#llegadas tbody>tr>td:nth-child(1) {
+    font-size: 4.4rem;
+    letter-spacing: -5px;
+}
+#llegadas td:nth-child(n+2) {
+    font-size: 3.2rem;
+    letter-spacing: -3px;
+}
+}
+
+@media all and (min-width: 1461px) and (max-width: 1600px) {
+/* Cabecera y sidebar tienen media queries, ya que cada frame se 
+   rige por su propio width                                       */
+
+
+/* 
+==============================================
+
+LLEGADASS
+
+=============================================== */
+
+
+#llegadas td {
+    font-size: 2em;
+    line-height: 55px;
+}
+#llegadas th {
+    font-size: 33px;
+    line-height: 42px;
+}
+#llegadas tbody>tr>td:nth-child(1) {
+    /*   PRIMER COLUMNA: CIUDAD SIGLAS  */
+  /* "The browser will then set column widths based on the width of cells in the first row of the table" */
+    font-size: 3.6rem;
+    letter-spacing: -1px;
+}
+#llegadas td:nth-child(n+2) {
+    /* alineamos todas las columnas a partir de la 3a que tenga numeros, a la Derecha */
+/*  text-align: right;  */
+/*  min-width: 12%;*/
+    letter-spacing: -1px;
+    font-size: 2.7rem;
+}
+}
+
+@media all and (min-width: 1311px) and (max-width: 1460px) {
+/* Cabecera y sidebar tienen media queries, ya que cada frame se 
+   rige por su propio width                                       */
+
+
+/* 
+==============================================
+
+LLEGADASS
+
+=============================================== */
+
+
+#llegadas td {
+    font-size: 2em;
+    line-height: 50px;
+}
+#llegadas th {
+    font-size: 33px;
+    line-height: 50px;
+}
+#llegadas tbody>tr>td:nth-child(1) {
+    font-size: 3.3rem;
+    letter-spacing: -1px;
+}
+#llegadas td:nth-child(n+2) {
+    letter-spacing: -1px;
+    font-size: 2.2rem;
+}
+}
+
+@media all and (min-width: 1171px) and (max-width: 1310px) {
+#llegadas h3 {
+    font-size: 30px;
+    padding-top: 0;
+    letter-spacing: 0;
+}
+#llegadas th {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0;
+}
+#llegadas td {
+    font-size: 2em;
+    line-height: 45px;
+    letter-spacing: 0;
+}
+#llegadas tbody>tr>td:nth-child(1) {
+    font-size: 2.6rem;
+    letter-spacing: -1px;
+}
+#llegadas td:nth-child(n+2) {
+    font-size: 1.8rem;
+    letter-spacing: 0;
+}
+}
+
+@media all and (min-width: 921px) and (max-width: 1170px) {
+#llegadas h3 {
+    font-size: 26px;
+    padding-top: 0;
+    letter-spacing: 0;
+}
+#llegadas th {
+    font-size: 24px;
+    line-height: 30px;
+    word-wrap: normal;
+    white-space: normal;
+    text-overflow: clip;
+}
+#llegadas td {
+    font-size: 2em;
+    line-height: 42px;
+}
+#llegadas tbody>tr>td:nth-child(1) {
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+#llegadas td:nth-child(n+2) {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+}
+}
+
+@media all and (min-width: 701px) and (max-width: 920px) {
+#llegadas h3 {
+    font-size: 24px;
+    padding-top: 0;
+    letter-spacing: 0;
+}
+#llegadas th, #llegadas-fondo th {
+    font-size: 22px;
+    line-height: 20px;
+    word-wrap: normal;
+    white-space: normal;
+    text-overflow: clip;
+    padding: 10px 0;
+}
+#llegadas td {
+    font-size: 2em;
+    line-height: 30px;
+}
+#llegadas tbody>tr>td:nth-child(1) {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+}
+#llegadas td:nth-child(n+2) {
+    font-size: 1.1rem;
+    letter-spacing: 0;
+}
+}
+
+@media all and (max-width: 700px) {
+#llegadas h3 {
+    font-size: 21px;
+    padding-top: 0;
+    letter-spacing: 0;
+}
+#llegadas-fondo th {
+    word-wrap: normal;
+    white-space: normal;
+    text-overflow: clip;
+}
+#llegadas th {
+    font-size: 17px;
+    line-height: 20px;
+    word-wrap: normal;
+    white-space: normal;
+    text-overflow: clip;
+    padding: 10px 0;
+}
+#llegadas td {
+    font-size: 2em;
+    line-height: 26px;
+}
+#llegadas tbody>tr>td:nth-child(1) {
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+#llegadas td:nth-child(n+2) {
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+}
+
+/* Large screens ----------- */
+@media all and (min-width : 1324px) {
+/*and (min-width : 1824px) {*/
+/* Styles */
+
+#encabezado td {
+    line-height: 30px;
+}
+#guias, #bultos {
+    font-size: 45px;
+}
+#encabezado td {
+    font-size: 38px;
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    font-size: 7.1rem;
+}
+.detalle_carga td:nth-child(n+2) {
+    font-size: 6.7rem;
+}
+#scroller {
+    height: 940px;
+}
+}
+
+/*
+Computerh Screen:
+  __   ___     ___     ___               ______   ___     ___  
+ /_ | |__ \   / _ \   / _ \             |____  | |__ \   / _ \ 
+  | |    ) | | (_) | | | | |   __  __       / /     ) | | | | |
+  | |   / /   > _ <  | | | |   \ \/ /      / /     / /  | | | |
+  | |  / /_  | (_) | | |_| |    >  <      / /     / /_  | |_| |
+  |_| |____|  \___/   \___/    /_/\_\    /_/     |____|  \___/ 
+                                                               
+                                                               
+                                                               
+                                                               */
+                                                               
+
+@media screen and (device-height: 720px) and (device-width: 1280px) {
+#scroller {
+    height: 634px;
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    /* siglas */
+    font-size: 5.1rem;
+}
+.detalle_carga td:nth-child(n+2) {
+    font-size: 4.7rem;
+}
+h2, status {
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#infobitacora {
+    margin-bottom: 5px;
+}
+#infobitacora th {
+    color: white;
+    height: 54px;
+}
+h5 {
+    line-height: 1.3;
+    font-size: 53px;
+    letter-spacing: -2px;
+}
+h4 {
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+h6, hora {
+    font-size: 52px;
+    letter-spacing: -1px;
+    /*      margin-top: 5px;
+      margin-bottom: 5px;*/
+    padding-right: 6px;
+}
+status {
+/*     display: block;*/
+}
+#infobitacora td {
+    line-height: 1.2;
+    height: 45px;
+}
+ruta, bitacora {
+    float: left;
+    clear: left;
+}
+.detalle_carga-tabla table, #detalle_carga-tabla td, #detalle_carga-tabla tr {
+    /* Mejoremos la legibilidad! */
+    line-height: 1.1;
+}
+#reloj, ruta {
+/*      margin: 0;*/
+}
+#encabezado td {
+    min-width: 50px;
+    max-width: 76px;
+    padding-right: 20px;
+}
+}
+
+@media screen and (device-height: 1080px) and (device-width: 1920px) {
+/*(min-device-height: 721px) and (max-device-height: 1080px), 
+(min-device-width: 1281px) and (max-device-width: 1920px) */
+
+#scroller {
+    height: 870px;
+}
+#infobitacora {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.fa-2x {
+    font-size: 3em;
+}
+h2, status {
+    font-size: 5.2rem;
+    margin-top: 36px;
+    margin-bottom: 26px;
+}
+h3, tracto, #reloj {
+    font-size: 46px;
+    line-height: 1.6;
+}
+h4 {
+    font-size: 0.9em;
+}
+#volumenes {
+    height: 45px;
+    background: white;
+}
+
+
+#infobitacora td {
+    font-size: 3.2rem;
+    padding-left: 12px;
+    line-height: 1.2;
+}
+#reloj {
+    font-size: 3.2rem;
+}
+#infobitacora {
+    margin-bottom: 5px;
+}
+#infobitacora th {
+    color: #E3ECD8;
+    height: 70px;
+    line-height: 1;
+}
+h5 {
+    font-size: 4.6rem;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+h6, hora {
+    font-size: 5rem;
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    font-size: 7.2rem;
+}
+.detalle_carga td:nth-child(n+2) {
+    font-size: 5.7rem;
+}
+#guias, #bultos {
+    font-size: 3rem;
+    margin-top: 0;
+    border-bottom: 0;
+}
+#encabezado td {
+font-size: 1.8em;
+height: 55px;
+min-width: 1.8em;
+max-width: 2.5em;
+line-height: 1;
+padding-top: 0px;
+padding-bottom: 0px;
+margin: 0;
+}
+}
+
+@media all and (min-height: 769px) and (max-height: 1079px) and (min-width: 1367px) {
+#scroller {
+    height: 940px;
+}
+.fa-2x {
+    font-size: 3em;
+}
+h2, status {
+    font-size: 5rem;
+}
+h3, tracto {
+    font-size: 48px;
+}
+h4 {
+    font-size: 2rem;
+}
+#volumenes {
+    height: 45px;
+}
+#infobitacora td {
+    font-size: 3.2em;
+}
+#reloj {
+    font-size: 3.2rem;
+}
+#infobitacora th {
+    height: 68px;
+}
+h5 {
+    font-size: 5.2rem;
+    letter-spacing: -3px;
+}
+h6, hora {
+    font-size: 6rem;
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    font-size: 7.2rem;
+}
+.detalle_carga td:nth-child(n+2) {
+    font-size: 5.7rem;
+}
+}
+
+/* 
+
+  _______   _            _     _               ______ ___   ___  
+ |__   __| | |          (_)   (_)             |____  |__ \ / _ \ 
+    | | ___| | _____   ___ ___ _  ___  _ __       / /   ) | | | |
+    | |/ _ \ |/ _ \ \ / / / __| |/ _ \| '_ \     / /   / /| | | |
+    | |  __/ |  __/\ V /| \__ \ | (_) | | | |   / /   / /_| |_| |
+    |_|\___|_|\___| \_/ |_|___/_|\___/|_| |_|  /_/   |____|\___/ 
+                                                                 
+                                                                 
+                                             
+ 
+ */
+
+
+
+@media only tv and (device-width: 1280px) {
+/*    @media only tv and (device-height: 720px) and (device-width: 1280px) {*/
+
+/* does it workkkkk??????? */
+/* P.S.: It worked :) */
+/* 
+body {
+    background-color: red;
+}
+*/
+
+#scroller {
+    height: 560px;
+}
+h2, status {
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+#guias, #bultos {
+    font-size: 34px;
+    margin-top: 1px;
+    border-bottom: 0;
+}
+#infobitacora {
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+#infobitacora th {
+    color: white;
+    height: 42px;
+    line-height: 1;
+}
+h5 {
+    line-height: 1.1;
+    font-size: 50px;
+    letter-spacing: -2px;
+}
+h4 {
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+h6, hora {
+    font-size: 52px;
+    letter-spacing: -1px;
+    /*      margin-top: 5px;
+      margin-bottom: 5px;*/
+    padding-right: 6px;
+}
+status {
+/*     display: block;*/
+}
+#infobitacora td {
+    line-height: 1.2;
+    height: 45px;
+}
+ruta, bitacora {
+    float: left;
+    clear: left;
+}
+#reloj, ruta {
+/*      margin: 0;*/
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    font-size: 5.5rem;
+    letter-spacing: -1px;
+}
+#encabezado td {
+    font-size: 1.6rem;
+    height: 39px;
+    min-width: 60px;
+    max-width: 75px;
+    line-height: 1;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+}
+
+/* 
+
+  _______   _            _     _               __  ___   ___   ___        
+ |__   __| | |          (_)   (_)             /_ |/ _ \ / _ \ / _ \       
+    | | ___| | _____   ___ ___ _  ___  _ __    | | | | | (_) | | | |_ __  
+    | |/ _ \ |/ _ \ \ / / / __| |/ _ \| '_ \   | | | | |> _ <| | | | '_ \ 
+    | |  __/ |  __/\ V /| \__ \ | (_) | | | |  | | |_| | (_) | |_| | |_) |
+    |_|\___|_|\___| \_/ |_|___/_|\___/|_| |_|  |_|\___/ \___/ \___/| .__/ 
+                                                                   | |    
+                                                                   |_|    
+                                                                 
+ */
+
+
+
+
+@media only tv and (device-width: 1920px) {
+/*(min-device-height: 721px) and (max-device-height: 1080px), 
+(min-device-width: 1281px) and (max-device-width: 1920px) */
+
+/* does it workkkkk??????? */
+/* P.S.: It worked :) */
+/* 
+body {
+    background-color: yellow;
+}
+*/
+
+#scroller {
+    height: 825px;
+}
+#infobitacora {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.fa-2x {
+    font-size: 3em;
+}
+h2, status {
+    font-size: 4.2rem;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+h3, tracto {
+    font-size: 40px;
+}
+h4 {
+    font-size: 2rem;
+}
+#volumenes {
+    height: 45px;
+}
+#infobitacora td {
+    font-size: 1.8em;
+    height: 65px;
+}
+#reloj {
+    font-size: 3.2rem;
+}
+#infobitacora {
+    margin-bottom: 5px;
+}
+#infobitacora th {
+    color: #E3ECD8;
+    height: 56px;
+    line-height: 1.1;
+}
+h5 {
+    font-size: 4.6rem;
+    letter-spacing: -3px;
+}
+h6, hora {
+    font-size: 5rem;
+}
+.detalle_carga tbody>tr>td:nth-child(1) {
+    font-size: 7.2rem;
+}
+.detalle_carga td:nth-child(n+2) {
+    font-size: 5.7rem;
+}
+#guias, #bultos {
+    font-size: 3rem;
+    margin-top: 0;
+    border-bottom: 0;
+}
+#encabezado td {
+    font-size: 2.4rem;
+    height: 55px;
+    min-width: 60px;
+    max-width: 76px;
+    line-height: 1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0;
+}
+}

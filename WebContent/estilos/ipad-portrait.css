@@ -1,0 +1,491 @@
+
+/* iPads (Portrait) ----------- 
+
+  _ _____          _  
+ (_)  __ \        | | 
+  _| |__) |_ _  __| | 
+ | |  ___/ _` |/ _` | 
+ | | |  | (_| | (_| | 
+ |_|_|   \__,_|\__,_|    
+
+*/
+/*
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+
+}
+
+*/
+/* Styles */
+
+
+/* does it workkkkk??????? */
+/* P.S.: It worked :) */
+/* 
+body {
+    background-color: blue;
+}
+*/
+
+/*
+.tablet body, .landscape body, .ios body, .iphone body, .ipad.portrait body {
+background: green;
+color: #FFF;
+}
+
+.tablet .landscape body, .ios .landscape body, .ipad.portrait .landscape body,
+.landscape .ipad.portrait body {
+background: red;
+color: #FFF;
+}
+
+
+.portrait body  {
+background: yellow;
+color: #FFF;
+}
+
+.landscape body  {
+background: red;
+color: #FFF;
+}
+*/
+
+/*
+.ipad.portrait {
+background: yellow;
+color: #FFF;
+}
+*/
+
+/*
+seleccionar
+*/
+
+.ipad.portrait .select2-container .select2-choice {
+  height: 1.4em;
+  padding: 10px;
+}
+
+.ipad.portrait .select2-container .select2-choice {
+line-height: inherit;
+}
+
+.ipad.portrait .select2-container .select2-choice > .select2-chosen {
+  margin: 0 auto;
+}
+
+.ipad.portrait .select2-container .select2-choice .select2-arrow b {
+/*width: 100%;
+height: 100%;*/
+background: url('../js/select2/select2x2.png') no-repeat -7px 1px;
+/*zoom: 1.5;*/
+}  
+ 
+  /*
+.ipad.portrait html[dir="rtl"] .select2-dropdown-open .select2-choice .select2-arrow b {
+background-position: -16px 5px;
+}
+  */
+  
+.ipad.portrait h1 {
+  padding: 6px 10px;
+}  
+  
+.ipad.portrait .color-1 {
+  color: #62D4FF;
+}
+
+.ipad.portrait .underline-white {
+color: rgb(244, 250, 191) !important;
+}
+
+.ipad.portrait #technique-one {
+  margin: 0;
+  width: 150px;
+  height: 33px;
+  background-image: url(../imagen/paquetexpress-logo-invertido.svg);
+}
+/*
+.ipad.portrait #technique-one {
+  width: 140px;
+  height: 31px;
+  background-image: url(../imagen/logo-azul2-140x31.png);
+}
+*/
+.ipad.portrait #technique-one span {
+  display: none;
+}
+
+
+.ipad.portrait .bitacoras-titulo {
+font-size: 2em;
+color: white;
+letter-spacing: 1px;
+/*font-family: sans-serif;
+font-weight: 900;*/
+}
+
+
+.ipad.portrait body {
+  background: #052241;
+}
+
+
+.ipad.portrait body#detalle_carga-tabla {
+  background: white;
+}
+
+
+.ipad.portrait select {
+  color: #FFF;
+  background: #111921;
+  font-size: 1.4em;
+  font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+/*  padding: 10px;*/
+  /*margin-left: 1em;*/
+  width: 90%;
+  border: none;
+}
+
+.ipad.portrait option {
+  line-height: 300%;
+}
+
+
+.ipad.portrait [selected] { /* Text colour and font weight, red and bold */
+  color: #717171;
+}
+
+.ipad.portrait option {
+  padding-left: 0.5em;
+  margin: 0.3em;
+  padding-top: 0.3em;
+}
+
+
+.ipad.portrait #bitacorasensucursal th {
+  color: white;
+  font-size: 1.4em;
+  border-bottom: 1px solid #9ea7af;
+  text-align: center;
+  font-weight: 300;
+  height: 35px;
+  border: 1px solid #000000;
+  background: #0F1728; 
+}
+
+.ipad.portrait #bitacorasensucursal td {
+padding: 6px 15px;
+background: white;
+}
+
+
+
+.ipad.portrait div#guias, 
+.ipad.portrait div#bultos {
+  margin-top: 0px;
+  float: left;
+  display: block;
+  color: white;
+  border-bottom: 2px solid #4886BC;
+  width: initial;
+  padding-left: 6em;
+  padding-right: 0em;
+}
+
+
+
+.ipad.portrait #detalle_carga-barra-izquierda, 
+.ipad.portrait #detalle_carga-ancho {
+    margin: 0 2px;
+    min-width: 100%;
+    max-width: 291px;
+}
+.ipad.portrait #scroller {
+    height: 730px;
+}
+.ipad.portrait #infobitacora {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.ipad.portrait .fa-2x {
+    font-size: 1.8em;
+}
+
+.ipad.portrait h1 {
+  background: rgba(0, 0, 0, 0.4);
+  letter-spacing: 0px;
+}
+
+.ipad.portrait h2, 
+.ipad.portrait status {
+font-size: 3rem;
+margin-top: 0.4em;
+margin-bottom: 0.4em;
+letter-spacing: 0px;
+}
+.ipad.portrait h3, 
+.ipad.portrait tracto, 
+.ipad.portrait h4,
+.ipad.portrait hora,
+.ipad.portrait #reloj,
+.ipad.portrait h6 { 
+  font-family: 'futura_ltcn_btlight', "Futura LtCn BT", Arial, sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0px;
+}
+
+.ipad.portrait #volumenes {
+    height: 45px;
+}
+.ipad.portrait #infobitacora td {
+/*    font-size: inherit;*/
+    height: 2.2em;
+}
+.ipad.portrait #infobitacora {
+  margin-bottom: 1px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+	box-shadow: none; 
+}
+.ipad.portrait #infobitacora th {
+color: #FFFFFF;
+height: 2.2em;
+line-height: 1;
+}
+
+.ipad.portrait #infobitacora th, 
+.ipad.portrait #encabezado th, 
+.ipad.portrait #guias, 
+.ipad.portrait #bultos, 
+.ipad.portrait #llegadas th, 
+.ipad.portrait #bitacorasensucursal th {
+background: #000000;
+}
+
+.ipad.portrait h5 {
+/* font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif; */
+/* font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 51px;
+  font-size: 2.6rem;
+  letter-spacing: -2px;
+  color: white;
+  line-height: 1.4;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  letter-spacing: -2px;
+  float: left;
+  clear: both;
+  font-weight: 900;
+  /* padding: 0 10px; */
+  margin: 0 0 0 0;
+  padding: initial;
+  padding-right: 10px;
+  height: inherit;
+}
+
+
+
+/*
+.ipad.portrait .detalle_carga tbody>tr>td:nth-child(1) {
+    font-size: 1rem;
+}
+*/
+.ipad.portrait .detalle_carga td:nth-child(n+2) {
+    font-size: 1rem;
+    letter-spacing: -2px;
+}
+/*
+.ipad.portrait #guias {
+    padding-left: 40%;
+}
+*/
+.ipad.portrait .portrait #guias, 
+.ipad.portrait .portrait #bultos {
+    font-size: 2.3rem;
+    margin-top: 0;
+    border-bottom: 0;
+    width: initial;
+}
+
+.ipad.portrait #encabezado td {
+    font-size: 1.3em;
+    height: inherit;
+    min-width: 40px;
+    max-width: 43px;
+    line-height: 1.1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+
+.ipad.portrait #txtHint > table > tbody > tr > td:nth-child(1), 
+.ipad.portrait #txtHint > table > tbody > tr > td:nth-child(2) {
+height: 1em;
+margin: 0;
+padding: 0;
+}
+
+.ipad.portrait .font-size-1,
+.ipad.portrait #txtHint > table > tbody > tr > td:nth-child(1), 
+.ipad.portrait #txtHint > table > tbody > tr > td:nth-child(2) {
+font-size: 1.3em;
+}
+
+
+.ipad.portrait .detalle_carga tbody>tr>td:nth-child(1) {
+font-family: Arial, sans-serif;
+color: black;
+font-size: 1em;
+min-width: 1em;
+max-width: 2em;
+letter-spacing: -3px;
+}
+
+.ipad.portrait .detalle_carga tbody>tr:last-child {
+ font-size: 1em;
+}
+
+.ipad.portrait .detalle_carga-tabla table, 
+.ipad.portrait #detalle_carga-tabla td, 
+.ipad.portrait #detalle_carga-tabla tr {
+line-height: 1.2;
+margin: 0;
+padding-left: 5px;
+padding-right: 5px;
+letter-spacing: 1px;
+font-weight: bold;
+min-width: 1em;
+max-width: 2em;
+font-size: 1.5em;
+}
+
+.ipad.portrait #encabezado tbody>tr>td:nth-child(1) {
+min-width: 2.5em;
+max-width: 2.5em;
+}
+
+
+
+*/
+.ipad.portrait .totales th {
+  font-size: 1.8em;
+  letter-spacing: -1px;
+  min-width: 1em;
+  max-width: 1em;
+/*  border-top: 1px solid #9E9E9E;*/
+/*  padding: 9px;*/
+}
+
+
+.ipad.portrait #regresar {
+width: 100%;
+margin: 0;
+padding-top: 0.5em;
+padding-bottom: 0.3em;
+height: 1.4em;
+font-size: 1.2em;
+background: #001E35;
+border-bottom: 2px solid #0F3E68;
+}
+
+.ipad.portrait #regresar span {
+  display: block;
+}
+
+
+.ipad.portrait #detalle_carga-tabla > form > table > tbody > tr > th:nth-child(4) {
+  padding-right: 9px;
+  border-right: 4px #C4C4C4 double;
+}
+
+
+.ipad.portrait h3#llegada-esperada,
+.ipad.portrait h3#salida-esperada {
+font-size: 0.8em;
+}
+
+
+/*
+Vertical align anything with just 3 lines of CSS
+http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+*/
+.ipad.portrait .slabtextdone {
+ -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.ipad.portrait .slabtext {
+ position: relative;
+ top: 50%;
+ transform: translateY(-50%);
+}
+
+
+/* LLEGADAS */
+
+.ipad.portrait #bitacoras-en-sucursal-v-escritorio {
+ /*  background: #F6F3D9;*/
+background: #0F1728; 
+}
+
+
+.ipad.portrait #llegadas {
+  width: 100%;
+}
+
+.ipad.portrait #llegadas td,
+.ipad.portrait #llegadas tbody>tr>td:nth-child(1) {
+font-size: 1.4em;
+}
+
+.ipad.portrait #llegadas td {
+  line-height: 1.5em;
+}
+
+.ipad.portrait #llegadas th {
+font-size: 1.1em;
+font-weight: 100;
+letter-spacing: 1px;
+line-height: 1.1em;
+border: 1px solid #002F3A;
+background: #000000;
+height: 2.1em;
+}
+
+.ipad.portrait #llegadas tbody>tr>td:nth-child(1) {
+  font-family: Arial, sans-serif;
+  font-size: 1.4em;
+  letter-spacing: 0px;
+  padding: 0.5em;
+  padding-left: 1.1em;
+}
+
+.ipad.portrait #llegadas td:nth-child(n+2) {
+  color: #3A3B3C;
+}
+
+.ipad.portrait #titulollegadas {
+  font-size: 1.4em;
+  font-weight: 100;
+}
+
+.ipad.portrait #llegadas td:nth-child(5) {
+color: #0D4E94;
+}
+
+.ipad.portrait #encabezado th, 
+.ipad.portrait #llegadas th, 
+.ipad.portrait #bitacorasensucursal th,
+.ipad.portrait #guias, 
+.ipad.portrait #bultos {
+  background: #001E35;
+}
