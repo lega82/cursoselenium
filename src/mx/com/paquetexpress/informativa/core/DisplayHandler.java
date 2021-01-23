@@ -8,8 +8,8 @@ public class DisplayHandler {
     final String DISPLAY_INACTIVO = "I";
     
     /**
-     * Método que evalua el estatus de la pantalla si esta siendo ocupada por una bitacora o no, y envia el
-     * mensaje al cliente I si esta inactivo o el número de la bitacora si esta ocupada
+     * Metodo que evalua el estatus de la pantalla si esta siendo ocupada por una bitacora o no, y envia el
+     * mensaje al cliente I si esta inactivo o el numero de la bitacora si esta ocupada
      * @param bitacora
      * @param moveId
      * @param remolqueId
@@ -37,7 +37,7 @@ public class DisplayHandler {
     }
     
     /**
-     * Método que se utilizará para cuando la panta este ocupadapor alguna bitacora.
+     * Metodo que se utilizara para cuando la panta este ocupadapor alguna bitacora.
      * @param bitAct
      * @param bitIna
      * @param moveIdAct

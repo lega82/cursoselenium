@@ -55,7 +55,7 @@ public class InfoDAO {
     }
     
     /**
-     * getInfo Método para obtener una pantalla en especifico de una sucursal determinada
+     * getInfo Mï¿½todo para obtener una pantalla en especifico de una sucursal determinada
      * @param branch
      * @param displayId
      * @return
@@ -99,7 +99,7 @@ public class InfoDAO {
     }
     
     /**
-     * updateBitacora Método que actualiza tablas de manejo de pantallas y tabla de control 
+     * updateBitacora Mï¿½todo que actualiza tablas de manejo de pantallas y tabla de control 
      * @param bitacora
      * @param moveId
      * @param remolqueId
@@ -157,7 +157,7 @@ public class InfoDAO {
     }
     
     /**
-     * updateBitacoraBusy Método que actualiza la tabla de pantallas con infomacion nueva y actualiza la tabla deoperacion
+     * updateBitacoraBusy Metodo que actualiza la tabla de pantallas con infomacion nueva y actualiza la tabla deoperacion
      * en las dos bitacoras una con la pantalla seleccionada y la bitacora a sustituir con el valor null
      * @param bitAct
      * @param bitIna
